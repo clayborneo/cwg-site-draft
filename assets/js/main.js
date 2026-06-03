@@ -1,4 +1,15 @@
 document.addEventListener('DOMContentLoaded', () => {
+  const backBtn = document.createElement('button');
+  backBtn.className = 'back-to-top';
+  backBtn.setAttribute('aria-label', 'Back to top');
+  backBtn.innerHTML = '<svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg>';
+  document.body.appendChild(backBtn);
+  backBtn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+  window.addEventListener('scroll', () => {
+    backBtn.classList.toggle('visible', window.scrollY > 600);
+  }, { passive: true });
+
+
   const toggle = document.querySelector('.nav-toggle');
   const nav = document.querySelector('.site-nav');
   if (toggle && nav) {

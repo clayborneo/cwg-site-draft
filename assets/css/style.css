@@ -662,6 +662,76 @@ section { padding: var(--section-pad) 32px; }
   gap: 12px;
 }
 
+/* --- ALCA membership band (footer) --- */
+.alca-band {
+  background: rgba(255,255,255,0.035);
+  border-top: 1px solid rgba(255,255,255,0.08);
+  padding: 32px;
+  margin-top: 36px;
+}
+.alca-band-inner {
+  max-width: var(--container-max);
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+.alca-mark {
+  flex-shrink: 0;
+  color: rgba(255,255,255,0.92);
+}
+.alca-text strong {
+  display: block;
+  color: rgba(255,255,255,0.95);
+  font-size: 1rem;
+  margin-bottom: 4px;
+  font-family: var(--heading-font);
+  font-weight: 400;
+}
+.alca-text p {
+  font-size: 0.85rem;
+  color: rgba(255,255,255,0.65);
+  line-height: 1.6;
+  margin: 0;
+  max-width: 520px;
+}
+@media (max-width: 600px) {
+  .alca-band-inner { flex-direction: column; text-align: center; gap: 14px; }
+  .alca-text p { max-width: 100%; }
+}
+
+/* --- Back to top button --- */
+.back-to-top {
+  position: fixed;
+  bottom: 28px;
+  right: 28px;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: var(--primary);
+  color: white;
+  border: 0;
+  cursor: pointer;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.18);
+  opacity: 0;
+  transform: translateY(8px);
+  pointer-events: none;
+  transition: all 0.25s ease;
+  z-index: 60;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.back-to-top.visible {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+.back-to-top:hover {
+  background: var(--primary-dark);
+  transform: translateY(-2px);
+}
+
 /* --- Bio modal --- */
 .bio-modal {
   position: fixed;
