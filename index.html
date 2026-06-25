@@ -41,70 +41,105 @@
   </ul>
 </header>
 
-<section class="hero">
-  <div class="hero-bg" style="background-image: url('assets/img/hero.jpg');"></div>
-  <div class="hero-container">
-    <div class="hero-text">
-      <span class="hero-eyebrow">Aging Life Care Professionals</span>
-      <h1>Helping those you love live with <em>dignity</em></h1>
-      <p class="hero-sub">Expert guidance, advocacy, and personalized care plans for families navigating aging, illness, or disability — in the Dallas-Fort Worth area and beyond.</p>
-      <div class="hero-ctas">
-        <a href="contact.html" class="btn btn-primary">Start a Conversation</a>
-        <a href="aging-life-care.html" class="btn btn-ghost">What is a Care Manager?</a>
+<section class="hero-carousel" id="hero-carousel" aria-roledescription="carousel" aria-label="What care management means">
+
+  <div class="carousel-slides">
+
+    <div class="carousel-slide active" data-slide="0">
+      <div class="carousel-img" style="background-image: url('assets/img/hero/slide1.jpg');"></div>
+      <div class="carousel-overlay"></div>
+      <div class="carousel-content">
+        <span class="carousel-eyebrow">01 &mdash; Care, Coordinated</span>
+        <h1>Helping those you love live with <em>dignity</em></h1>
+        <p>Care management is the professional layer above caregiving &mdash; a trusted expert who assesses, plans, and coordinates every part of your loved one's care.</p>
+        <div class="carousel-ctas">
+          <a href="contact.html" class="btn btn-primary">Start a Conversation</a>
+          <a href="aging-life-care.html" class="btn btn-ghost">What is a Care Manager?</a>
+        </div>
       </div>
     </div>
-    <div class="hero-video" id="hero-video">
-      <video class="hero-video-player" preload="metadata" playsinline controls poster="assets/img/hero-poster.jpg" style="display: none; width: 100%; height: 100%; object-fit: cover;">
-        <source src="assets/img/angela-intro.mp4" type="video/mp4">
-      </video>
-      <div class="hero-video-poster" style="background-image: url('assets/img/hero-poster.jpg');"></div>
-      <div class="hero-video-overlay">
-        <button class="play-circle" id="hero-play" aria-label="Play introduction video">
-          <svg viewBox="0 0 24 24" width="28" height="28" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
-        </button>
-        <span class="video-label">Sample clip — Angela at the ALCA Conference</span>
-        <span class="video-note">Placeholder. The final homepage explainer (script in progress with Melissa) will replace this.</span>
+
+    <div class="carousel-slide" data-slide="1">
+      <div class="carousel-img" style="background-image: url('assets/img/hero/slide2.jpg');"></div>
+      <div class="carousel-overlay"></div>
+      <div class="carousel-content">
+        <span class="carousel-eyebrow">02 &mdash; Personalized Plans</span>
+        <h1>A plan built around <em>your</em> family</h1>
+        <p>We start by listening &mdash; to your loved one's wishes, your family's concerns, and the realities on the ground. Then we build a care plan that fits, and adapts as needs change.</p>
+        <div class="carousel-ctas">
+          <a href="contact.html" class="btn btn-primary">Start a Conversation</a>
+          <a href="aging-life-care.html" class="btn btn-ghost">What is a Care Manager?</a>
+        </div>
       </div>
     </div>
+
+    <div class="carousel-slide" data-slide="2">
+      <div class="carousel-img" style="background-image: url('assets/img/hero/slide3.jpg');"></div>
+      <div class="carousel-overlay"></div>
+      <div class="carousel-content">
+        <span class="carousel-eyebrow">03 &mdash; Your Advocate</span>
+        <h1>A knowledgeable voice at every <em>appointment</em></h1>
+        <p>We attend medical visits with your loved one, ask the right questions, coordinate between specialists, and make sure nothing falls through the cracks.</p>
+        <div class="carousel-ctas">
+          <a href="contact.html" class="btn btn-primary">Start a Conversation</a>
+          <a href="aging-life-care.html" class="btn btn-ghost">What is a Care Manager?</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="carousel-slide" data-slide="3">
+      <div class="carousel-img" style="background-image: url('assets/img/hero/slide4.jpg');"></div>
+      <div class="carousel-overlay"></div>
+      <div class="carousel-content">
+        <span class="carousel-eyebrow">04 &mdash; Peace of Mind</span>
+        <h1>Decisions made together &mdash; with <em>expertise</em> in the room</h1>
+        <p>From crisis response to long-term planning, we walk alongside your family. Clarity, less stress, and confidence that your loved one is in good hands.</p>
+        <div class="carousel-ctas">
+          <a href="contact.html" class="btn btn-primary">Start a Conversation</a>
+          <a href="aging-life-care.html" class="btn btn-ghost">What is a Care Manager?</a>
+        </div>
+      </div>
+    </div>
+
   </div>
+
+  <div class="carousel-controls">
+    <button class="carousel-arrow carousel-prev" aria-label="Previous slide">
+      <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+    </button>
+    <div class="carousel-dots">
+      <button class="carousel-dot active" data-target="0" aria-label="Slide 1"></button>
+      <button class="carousel-dot" data-target="1" aria-label="Slide 2"></button>
+      <button class="carousel-dot" data-target="2" aria-label="Slide 3"></button>
+      <button class="carousel-dot" data-target="3" aria-label="Slide 4"></button>
+    </div>
+    <button class="carousel-arrow carousel-next" aria-label="Next slide">
+      <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+    </button>
+  </div>
+
+  <div class="carousel-progress"><div class="carousel-progress-bar" id="carousel-progress-bar"></div></div>
+
 </section>
 
-<section class="framing">
-  <div class="framing-grid">
-    <div class="framing-text">
-      <span class="section-eyebrow">Care management ≠ Caregiving</span>
-      <h2>You may be familiar with caregiving. Care management is something different.</h2>
-      <p>Caregiving is the hands-on help a family member or hired caregiver provides — bathing, meal prep, transportation.</p>
-      <p><strong>Care management</strong> is the professional layer above that. Our Aging Life Care Professionals — nurses, social workers, and health specialists — assess your full situation, build a personalized plan, and coordinate every moving part of your loved one's care.</p>
-      <div class="framing-callout">
-        Simply put: a caregiver provides care. A Care Manager makes sure you receive the right care, from the right people, at the right time.
-      </div>
+<section class="checklist-section">
+  <div class="section-inner">
+    <div class="section-header">
+      <div class="section-divider"></div>
+      <span class="section-eyebrow">You May Need Us If…</span>
+      <h2>Sound familiar?</h2>
+      <p>These are the situations families come to us with most often. If any feel like your own — we're here to help.</p>
     </div>
-    <div class="framing-compare">
-      <div class="compare-row">
-        <div class="compare-col">
-          <h4>Caregiver</h4>
-          <h3>Provides the care</h3>
-          <p>Hands-on daily help: meals, hygiene, transportation, companionship.</p>
-        </div>
-        <div class="compare-col cm">
-          <h4>Care Manager</h4>
-          <h3>Coordinates the care</h3>
-          <p>Assesses needs, builds the plan, attends appointments, and advocates for your loved one across the entire care system.</p>
-        </div>
-      </div>
-      <div class="compare-divider"></div>
-      <div class="compare-row">
-        <div class="compare-col">
-          <h4>Best for</h4>
-          <p style="color: var(--text);">Day-to-day assistance at home.</p>
-        </div>
-        <div class="compare-col cm">
-          <h4>Best for</h4>
-          <p style="color: var(--text);">Families navigating complex medical, housing, or family decisions.</p>
-        </div>
-      </div>
-    </div>
+    <ul class="checklist">
+      <li><span class="check-icon"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg></span>You're worried Mom or Dad is missing medications.</li>
+      <li><span class="check-icon"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg></span>Doctor visits feel overwhelming or unclear.</li>
+      <li><span class="check-icon"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg></span>You suspect memory problems but don't know the next step.</li>
+      <li><span class="check-icon"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg></span>Your loved one's home no longer feels safe.</li>
+      <li><span class="check-icon"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg></span>Family disagreements about care are growing.</li>
+      <li><span class="check-icon"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg></span>The primary caregiver is exhausted and burning out.</li>
+      <li><span class="check-icon"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg></span>You live far away and worry about what you can't see.</li>
+      <li><span class="check-icon"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg></span>You want to plan ahead before a crisis forces decisions.</li>
+    </ul>
   </div>
 </section>
 
@@ -160,27 +195,6 @@
         <p>Ongoing monitoring and plan updates as your loved one's needs change — for as long as you need us.</p>
       </div>
     </div>
-  </div>
-</section>
-
-<section class="checklist-section">
-  <div class="section-inner">
-    <div class="section-header">
-      <div class="section-divider"></div>
-      <span class="section-eyebrow">You May Need Us If…</span>
-      <h2>Sound familiar?</h2>
-      <p>These are the situations families come to us with most often. If any feel like your own — we're here to help.</p>
-    </div>
-    <ul class="checklist">
-      <li><span class="check-icon"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg></span>You're worried Mom or Dad is missing medications.</li>
-      <li><span class="check-icon"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg></span>Doctor visits feel overwhelming or unclear.</li>
-      <li><span class="check-icon"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg></span>You suspect memory problems but don't know the next step.</li>
-      <li><span class="check-icon"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg></span>Your loved one's home no longer feels safe.</li>
-      <li><span class="check-icon"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg></span>Family disagreements about care are growing.</li>
-      <li><span class="check-icon"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg></span>The primary caregiver is exhausted and burning out.</li>
-      <li><span class="check-icon"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg></span>You live far away and worry about what you can't see.</li>
-      <li><span class="check-icon"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg></span>You want to plan ahead before a crisis forces decisions.</li>
-    </ul>
   </div>
 </section>
 

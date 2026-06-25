@@ -24,20 +24,58 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  const heroPlay = document.getElementById('hero-play');
-  const heroWrapper = document.getElementById('hero-video');
-  if (heroPlay && heroWrapper) {
-    heroPlay.addEventListener('click', () => {
-      const video = heroWrapper.querySelector('.hero-video-player');
-      const poster = heroWrapper.querySelector('.hero-video-poster');
-      const overlay = heroWrapper.querySelector('.hero-video-overlay');
-      if (video) {
-        video.style.display = 'block';
-        if (poster) poster.style.display = 'none';
-        if (overlay) overlay.style.display = 'none';
-        video.play();
+  const carousel = document.getElementById('hero-carousel');
+  if (carousel) {
+    const slides = carousel.querySelectorAll('.carousel-slide');
+    const dots = carousel.querySelectorAll('.carousel-dot');
+    const prevBtn = carousel.querySelector('.carousel-prev');
+    const nextBtn = carousel.querySelector('.carousel-next');
+    const progressBar = document.getElementById('carousel-progress-bar');
+    let current = 0;
+    let timer = null;
+    let progressTimer = null;
+    const INTERVAL = 7000;
+
+    function go(index) {
+      slides[current].classList.remove('active');
+      dots[current].classList.remove('active');
+      current = (index + slides.length) % slides.length;
+      slides[current].classList.add('active');
+      dots[current].classList.add('active');
+      resetProgress();
+    }
+    function resetProgress() {
+      if (!progressBar) return;
+      progressBar.style.transition = 'none';
+      progressBar.style.width = '0%';
+      void progressBar.offsetWidth;
+      progressBar.style.transition = `width ${INTERVAL}ms linear`;
+      progressBar.style.width = '100%';
+    }
+    function startAuto() {
+      stopAuto();
+      timer = setInterval(() => go(current + 1), INTERVAL);
+      resetProgress();
+    }
+    function stopAuto() {
+      if (timer) clearInterval(timer);
+      timer = null;
+    }
+    dots.forEach((d, i) => d.addEventListener('click', () => { go(i); startAuto(); }));
+    if (prevBtn) prevBtn.addEventListener('click', () => { go(current - 1); startAuto(); });
+    if (nextBtn) nextBtn.addEventListener('click', () => { go(current + 1); startAuto(); });
+    carousel.addEventListener('mouseenter', stopAuto);
+    carousel.addEventListener('mouseleave', startAuto);
+
+    // Keyboard
+    document.addEventListener('keydown', (e) => {
+      if (document.activeElement && carousel.contains(document.activeElement)) {
+        if (e.key === 'ArrowLeft')  { go(current - 1); startAuto(); }
+        if (e.key === 'ArrowRight') { go(current + 1); startAuto(); }
       }
     });
+
+    startAuto();
   }
 
   const modal = document.getElementById('bio-modal');
