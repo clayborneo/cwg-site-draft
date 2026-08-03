@@ -6,10 +6,12 @@
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 :root {
-  /* Palette A: Blue & Peony (Angela: no teal, bright pink) */
-  --primary: #5B82B8;
-  --primary-light: #EEF2F8;
-  --primary-dark: #3E6090;
+  /* Palette: Periwinkle (from the original site) & Peony — no teal */
+  --primary: #6E7AC2;
+  --primary-light: #E6EBF7;
+  --primary-dark: #4051A1;
+  --periwinkle: #A4AEDB;
+  --brand-pink: #E84880;
   --secondary: #E898B0;
   --secondary-dark: #A8607A;
   --secondary-light: #F8E0E8;
@@ -18,7 +20,7 @@
   --white: #FFFFFF;
   --text: #2C3E50;
   --text-light: #5A6C7E;
-  --border: #D8E1ED;
+  --border: #DCDFF0;
 
   /* Type 2: Modern Warmth */
   --heading-font: 'DM Serif Display', Georgia, serif;
@@ -64,13 +66,16 @@ p { line-height: 1.7; }
   z-index: 50;
 }
 .site-logo { display: flex; align-items: center; gap: 14px; color: var(--text); }
-.site-logo svg { color: var(--primary); }
+.site-logo-mark { width: 52px; height: auto; }
 .site-logo-text {
   font-family: var(--heading-font);
   font-size: 1.4rem;
   letter-spacing: 0.5px;
+  white-space: nowrap;
 }
+.site-logo-text .grace { color: var(--brand-pink); }
 .site-nav { display: flex; gap: 28px; list-style: none; align-items: center; }
+.site-nav a.nav-cta { white-space: nowrap; }
 .site-nav a {
   color: var(--text-light);
   font-size: 0.92rem;
