@@ -630,7 +630,7 @@ section { padding: var(--section-pad) 32px; }
 
 /* --- Values band --- */
 .values-band {
-  background: linear-gradient(135deg, var(--secondary-light) 0%, #FDF3F7 100%);
+  background: var(--primary-light);
   border-top: 1px solid var(--border);
   border-bottom: 1px solid var(--border);
   color: var(--dark);
@@ -638,7 +638,7 @@ section { padding: var(--section-pad) 32px; }
 }
 .values-band-inner { max-width: var(--container-max); margin: 0 auto; }
 .values-band h3 {
-  color: var(--secondary-dark);
+  color: var(--primary-dark);
   font-size: 1.1rem;
   font-weight: 400;
   letter-spacing: 2px;
