@@ -325,7 +325,7 @@ p { line-height: 1.7; }
   margin: 0;
   margin-bottom: 0;
 }
-.carousel-content .hero-lockup-name span { color: var(--soft-pink, #F6A8C8); }
+.carousel-content .hero-lockup-name span { color: var(--white); }
 .carousel-content .hero-lockup-tagline {
   font-size: 1.12rem;
   letter-spacing: 0.045em;
