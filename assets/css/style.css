@@ -308,7 +308,7 @@ p { line-height: 1.7; }
   display: flex;
   align-items: center;
   gap: 26px;
-  margin-bottom: 34px;
+  margin-bottom: 22px;
 }
 .hero-lockup img {
   height: 118px;
@@ -328,12 +328,18 @@ p { line-height: 1.7; }
 }
 .carousel-content .hero-lockup-name span { color: var(--white); }
 .carousel-content .hero-lockup-tagline {
-  font-size: 1.12rem;
-  letter-spacing: 0.045em;
-  color: rgba(255,255,255,0.92);
-  margin: 10px 0 0;
+  font-size: 0.92rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.85);
+  margin: 2px 0 0;
   margin-bottom: 0;
 }
+.carousel-content .hero-explainer {
+  margin-left: 144px;
+  max-width: 540px;
+}
+.carousel-slide[data-slide="0"] .carousel-ctas { margin-left: 144px; }
 .carousel-eyebrow {
   display: inline-block;
   font-family: var(--body-font);
@@ -438,6 +444,8 @@ p { line-height: 1.7; }
   .carousel-content { padding: 0 28px; }
   .carousel-content h1 { font-size: 2.2rem; }
   .hero-lockup { flex-direction: column; align-items: flex-start; gap: 16px; margin-bottom: 24px; }
+  .carousel-content .hero-explainer { margin-left: 0; }
+  .carousel-slide[data-slide="0"] .carousel-ctas { margin-left: 0; }
   .hero-lockup img { height: 84px; }
   .carousel-content .hero-lockup-name { font-size: 2.2rem; }
   .carousel-content .hero-lockup-tagline { font-size: 1rem; }
