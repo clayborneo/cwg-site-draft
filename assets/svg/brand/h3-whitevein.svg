@@ -10,7 +10,7 @@ C 100 244 102 266 118 276
 C 138 288 166 282 182 258
 C 191 244 196 222 196 206 Z" fill="#F062A0"/>
 <path d="M192 183 C 168 148 138 108 100 78 M192 185 C 162 160 124 134 90 106 M192 188 C 168 176 140 162 112 146" fill="none" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round"/><path d="M193 202 C 168 208 140 218 118 232 M194 205 C 172 220 150 240 130 262 M195 208 C 184 228 170 250 154 272" fill="none" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round"/>
-<circle cx="101" cy="74" r="3.2" fill="#FFFFFF"/><circle cx="87" cy="84" r="2.9" fill="#FFFFFF"/><circle cx="82" cy="100" r="2.7" fill="#FFFFFF"/><circle cx="90" cy="120" r="2.5" fill="#FFFFFF"/><circle cx="102" cy="138" r="2.3" fill="#FFFFFF"/><circle cx="118" cy="153" r="2.1" fill="#FFFFFF"/><circle cx="111" cy="240" r="2.7" fill="#FFFFFF"/><circle cx="110" cy="257" r="2.5" fill="#FFFFFF"/><circle cx="120" cy="270" r="2.3" fill="#FFFFFF"/><circle cx="136" cy="278" r="2.1" fill="#FFFFFF"/><circle cx="155" cy="279" r="2.0" fill="#FFFFFF"/></g></defs>
+<circle cx="104" cy="82" r="3.0" fill="#FFFFFF"/><circle cx="92" cy="92" r="2.8" fill="#FFFFFF"/><circle cx="89" cy="106" r="2.6" fill="#FFFFFF"/><circle cx="97" cy="124" r="2.4" fill="#FFFFFF"/><circle cx="108" cy="140" r="2.2" fill="#FFFFFF"/><circle cx="122" cy="154" r="2.0" fill="#FFFFFF"/><circle cx="119" cy="241" r="2.6" fill="#FFFFFF"/><circle cx="118" cy="255" r="2.4" fill="#FFFFFF"/><circle cx="127" cy="266" r="2.2" fill="#FFFFFF"/><circle cx="141" cy="271" r="2.1" fill="#FFFFFF"/><circle cx="157" cy="271" r="2.0" fill="#FFFFFF"/></g></defs>
 <use href="#hw"/>
 <use href="#hw" transform="translate(400,0) scale(-1,1)"/>
 <ellipse cx="200" cy="222" rx="6.5" ry="29" fill="#C22B62"/>
