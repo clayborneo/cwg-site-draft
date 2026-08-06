@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
   <link rel="icon" type="image/svg+xml" href="assets/svg/badge.svg">
-  <link rel="stylesheet" href="assets/css/style.css?v=11">
+  <link rel="stylesheet" href="assets/css/style.css?v=12">
 </head>
 <body>
 
@@ -66,7 +66,8 @@
         </li>
       </ul>
     </div>
-    <form class="contact-form" onsubmit="return false;">
+    <form class="contact-form" novalidate>
+      <div class="hp-field" aria-hidden="true"><label>Website<input type="text" name="website" tabindex="-1" autocomplete="off"></label></div>
       <h3 style="font-size: 1.4rem; margin-bottom: 6px;">Send us a message</h3>
       <p style="color: var(--text-light); margin-bottom: 8px; font-size: 0.92rem;">All fields except phone are required.</p>
       <div class="form-row">
@@ -106,6 +107,7 @@
         <label for="cp-msg">Tell us about your situation *</label>
         <textarea id="cp-msg" required placeholder="A few sentences about what's going on. The more context, the better we can help."></textarea>
       </div>
+      <p class="form-privacy">Please don't include medical or other sensitive details here. We'll cover specifics together by phone.</p>
       <button type="submit" class="btn btn-primary" style="align-self: flex-start;">Send Message</button>
     </form>
   </div>

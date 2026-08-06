@@ -129,3 +129,71 @@ document.addEventListener('DOMContentLoaded', () => {
     document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && modal.classList.contains('open')) closeBio(); });
   }
 });
+
+
+// ---------------------------------------------------------------------------
+// Contact form
+// Set to the deployed Cloudflare Worker URL (see workers/contact-form/README).
+// While empty, forms fall back to opening the visitor's email app.
+const CONTACT_FORM_ENDPOINT = '';
+const CONTACT_FALLBACK_EMAIL = 'melissa@caringwithgrace.com';
+
+document.querySelectorAll('.contact-form').forEach((form) => {
+  form.removeAttribute('onsubmit');
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    if (!form.reportValidity()) return;
+
+    const val = (sel) => { const el = form.querySelector(sel); return el ? el.value.trim() : ''; };
+    const first = val('input[id$="-fn"]'), last = val('input[id$="-ln"]');
+    const payload = {
+      name: (first + ' ' + last).trim(),
+      email: val('input[type="email"]'),
+      phone: val('input[type="tel"]'),
+      topic: val('select[id$="-topic"]'),
+      referral: val('select[id$="-ref"]'),
+      message: val('textarea'),
+      website: val('input[name="website"]'),   // honeypot
+      page: location.pathname,
+    };
+
+    const btn = form.querySelector('button[type="submit"]');
+
+    if (!CONTACT_FORM_ENDPOINT) {
+      const body = ['Name: ' + payload.name, 'Phone: ' + payload.phone,
+        'Topic: ' + payload.topic, 'Heard about us: ' + payload.referral,
+        '', payload.message].join('\n');
+      location.href = 'mailto:' + CONTACT_FALLBACK_EMAIL +
+        '?subject=' + encodeURIComponent('Website inquiry from ' + payload.name) +
+        '&body=' + encodeURIComponent(body);
+      return;
+    }
+
+    btn.disabled = true;
+    const btnText = btn.textContent;
+    btn.textContent = 'Sending…';
+    try {
+      const resp = await fetch(CONTACT_FORM_ENDPOINT, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload),
+      });
+      const out = await resp.json();
+      if (!out.ok) throw new Error(out.error || 'failed');
+      form.innerHTML = '<div class="form-success"><h3>Thank you!</h3>' +
+        '<p>Your message is on its way. We respond within one business day, ' +
+        'often much sooner. If this is urgent, please call ' +
+        '<a href="tel:+12147759969">(214) 775-9969</a>.</p></div>';
+    } catch (err) {
+      btn.disabled = false;
+      btn.textContent = btnText;
+      let errEl = form.querySelector('.form-error');
+      if (!errEl) {
+        errEl = document.createElement('p');
+        errEl.className = 'form-error';
+        btn.parentNode.insertBefore(errEl, btn);
+      }
+      errEl.textContent = 'Something went wrong sending your message. Please try again, or call us at (214) 775-9969.';
+    }
+  });
+});
