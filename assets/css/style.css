@@ -1126,8 +1126,8 @@ section { padding: var(--section-pad) 32px; }
 
 /* --- Draft banner (visible only on local) --- */
 .draft-banner {
-  background: linear-gradient(90deg, var(--secondary) 0%, var(--primary) 100%);
-  color: var(--white);
+  background: #3A4149;
+  color: rgba(255,255,255,0.85);
   text-align: center;
   padding: 8px 20px;
   font-size: 0.78rem;
