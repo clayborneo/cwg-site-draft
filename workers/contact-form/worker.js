@@ -1,13 +1,14 @@
 /**
  * Caring with Grace — contact form backend.
- * Cloudflare Worker owned by CWG; forwards submissions to email via Resend.
+ * Cloudflare Worker owned by CWG; forwards submissions to email via Postmark.
+ * (Postmark chosen over Resend: its DNS verification works with Wix DNS.)
  *
  * Secrets (set with `wrangler secret put NAME`):
- *   RESEND_API_KEY   - API key from resend.com (domain caringwithgrace.com verified)
- *   TURNSTILE_SECRET - (optional) Cloudflare Turnstile secret for spam protection
+ *   POSTMARK_SERVER_TOKEN - Server API token from postmarkapp.com
+ *   TURNSTILE_SECRET      - (optional) Cloudflare Turnstile secret for spam
  * Vars (wrangler.toml):
  *   TO_EMAIL         - where submissions go
- *   FROM_EMAIL       - verified sender, e.g. website@caringwithgrace.com
+ *   FROM_EMAIL       - a Postmark-verified sender signature
  *   ALLOWED_ORIGINS  - comma-separated origins allowed to POST
  */
 
@@ -56,20 +57,25 @@ export default {
       message,
     ].filter(l => l !== null);
 
-    const resp = await fetch("https://api.resend.com/emails", {
+    const resp = await fetch("https://api.postmarkapp.com/email", {
       method: "POST",
-      headers: { Authorization: `Bearer ${env.RESEND_API_KEY}`, "Content-Type": "application/json" },
+      headers: {
+        "X-Postmark-Server-Token": env.POSTMARK_SERVER_TOKEN,
+        "Content-Type": "application/json",
+        Accept: "application/json",
+      },
       body: JSON.stringify({
-        from: `CWG Website <${env.FROM_EMAIL}>`,
-        to: [env.TO_EMAIL],
-        reply_to: email,
-        subject: `Website inquiry from ${name}`,
-        text: lines.join("\n"),
+        From: `CWG Website <${env.FROM_EMAIL}>`,
+        To: env.TO_EMAIL,
+        ReplyTo: email,
+        Subject: `Website inquiry from ${name}`,
+        TextBody: lines.join("\n"),
+        MessageStream: "outbound",
       }),
     });
 
     if (!resp.ok) {
-      console.error("Resend error", resp.status, await resp.text());
+      console.error("Postmark error", resp.status, await resp.text());
       return json({ ok: false, error: "Delivery failed" }, 502, cors);
     }
     return json({ ok: true }, 200, cors);

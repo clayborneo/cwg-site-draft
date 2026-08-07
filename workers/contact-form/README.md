@@ -1,19 +1,25 @@
 # CWG contact form backend
 
 A Cloudflare Worker owned by Caring with Grace. Receives form POSTs from the
-website and emails them to Melissa via Resend. No third-party form service.
+website and emails them to Melissa via Postmark. No third-party form service.
+(Postmark, not Resend: Resend requires a subdomain MX record that Wix DNS
+cannot create. Postmark's records are Wix-compatible.)
 
 ## One-time setup (about 15 minutes)
 
 1. Create a free Cloudflare account (cloudflare.com) if CWG doesn't have one.
-2. Create a free Resend account (resend.com), add and verify the
-   caringwithgrace.com domain (Resend shows the DNS records to add), and
-   create an API key.
+2. Create a free Postmark account (postmarkapp.com). Two verification options:
+   - Quickest, zero DNS: Sender Signatures -> add the FROM address (see
+     wrangler.toml) or melissa@caringwithgrace.com; click the confirmation
+     link Postmark emails to that inbox.
+   - Better deliverability: also verify the caringwithgrace.com domain
+     (DKIM TXT + Return-Path CNAME; both work in Wix's DNS manager).
+   Then copy the Server API token (Servers -> API Tokens).
 3. From this folder:
 
        npm install -g wrangler
        wrangler login
-       wrangler secret put RESEND_API_KEY   # paste the Resend key
+       wrangler secret put POSTMARK_SERVER_TOKEN   # paste the token
        wrangler deploy
 
 4. Wrangler prints the Worker URL, e.g.
