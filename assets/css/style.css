@@ -180,7 +180,7 @@ p { line-height: 1.7; }
   align-items: center;
   gap: 10px;
   padding: 14px 28px;
-  border-radius: 8px;
+  border-radius: 5px;
   font-family: var(--body-font);
   font-size: 0.95rem;
   font-weight: 600;
@@ -575,26 +575,18 @@ section { padding: var(--section-pad) 32px; }
   background: var(--white);
   border: 1px solid #D9DEF0;
   border-top: 3px solid var(--periwinkle);
-  border-radius: 14px;
+  border-radius: 6px;
   padding: 32px 26px;
-  transition: all 0.2s;
-  box-shadow: 0 5px 16px rgba(64,81,161,0.07);
-}
-.service-card:hover {
-  box-shadow: 0 12px 32px rgba(0,0,0,0.06);
-  transform: translateY(-3px);
-  border-color: var(--primary-light);
+  box-shadow: 0 1px 3px rgba(43,34,38,0.05);
 }
 .service-icon {
-  width: 52px; height: 52px;
-  border-radius: 12px;
-  background: var(--primary-light);
   color: var(--primary);
   display: flex;
   align-items: center;
-  justify-content: center;
-  margin-bottom: 18px;
+  margin-bottom: 14px;
 }
+.service-icon svg { width: 28px; height: 28px; }
+.service-icon span { font-size: 1.5rem !important; }
 .service-card h3 {
   font-size: 1.2rem;
   margin-bottom: 10px;
@@ -622,8 +614,8 @@ section { padding: var(--section-pad) 32px; }
   padding: 18px 22px;
   background: var(--white);
   border: 1px solid #DDE2F2;
-  border-radius: 12px;
-  box-shadow: 0 3px 10px rgba(64,81,161,0.05);
+  border-radius: 6px;
+  box-shadow: 0 1px 3px rgba(43,34,38,0.04);
   font-size: 0.96rem;
   color: var(--text);
 }
@@ -695,7 +687,7 @@ section { padding: var(--section-pad) 32px; }
 .study-stat {
   background: var(--white);
   border: 1px solid var(--border);
-  border-radius: 14px;
+  border-radius: 6px;
   padding: 28px 24px 22px;
   text-align: center;
   box-shadow: 0 6px 18px rgba(64,81,161,0.07);
@@ -735,13 +727,13 @@ section { padding: var(--section-pad) 32px; }
 .team-card {
   background: var(--white);
   border: 1px solid var(--border);
-  border-radius: 14px;
+  border-radius: 6px;
   overflow: hidden;
   text-align: center;
   cursor: pointer;
   transition: all 0.2s;
 }
-.team-card:hover { box-shadow: 0 12px 28px rgba(0,0,0,0.08); transform: translateY(-2px); }
+.team-card:hover { box-shadow: 0 4px 14px rgba(0,0,0,0.08); }
 .team-photo {
   aspect-ratio: 1;
   background: var(--light);
@@ -826,12 +818,10 @@ section { padding: var(--section-pad) 32px; }
   background: var(--white);
   border: 1px solid #D9DEF0;
   border-top: 3px solid var(--secondary);
-  border-radius: 14px;
+  border-radius: 6px;
   padding: 28px;
-  transition: all 0.2s;
-  box-shadow: 0 5px 16px rgba(64,81,161,0.07);
+  box-shadow: 0 1px 3px rgba(43,34,38,0.05);
 }
-.resource-card:hover { box-shadow: 0 8px 24px rgba(0,0,0,0.05); border-color: var(--primary-light); }
 .resource-card h3 {
   font-size: 1.25rem;
   margin-bottom: 16px;
@@ -840,11 +830,8 @@ section { padding: var(--section-pad) 32px; }
   gap: 12px;
 }
 .resource-card h3 .res-icon {
-  width: 36px; height: 36px;
-  border-radius: 8px;
-  background: var(--primary-light);
   color: var(--primary);
-  display: flex; align-items: center; justify-content: center;
+  display: flex; align-items: center;
   flex-shrink: 0;
 }
 .resource-card ul { list-style: none; }
