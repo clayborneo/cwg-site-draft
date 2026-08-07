@@ -132,6 +132,22 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 // ---------------------------------------------------------------------------
+// Analytics (GA4). Paste the Measurement ID (G-XXXXXXXXXX) from
+// analytics.google.com > Admin > Data streams to activate on all pages.
+const GA_MEASUREMENT_ID = '';
+
+if (GA_MEASUREMENT_ID) {
+  const gs = document.createElement('script');
+  gs.async = true;
+  gs.src = 'https://www.googletagmanager.com/gtag/js?id=' + GA_MEASUREMENT_ID;
+  document.head.appendChild(gs);
+  window.dataLayer = window.dataLayer || [];
+  function gtag() { dataLayer.push(arguments); }
+  gtag('js', new Date());
+  gtag('config', GA_MEASUREMENT_ID);
+}
+
+// ---------------------------------------------------------------------------
 // Contact form
 // Set to the deployed Cloudflare Worker URL (see workers/contact-form/README).
 // While empty, forms fall back to opening the visitor's email app.
