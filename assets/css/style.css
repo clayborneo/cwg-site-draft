@@ -670,6 +670,11 @@ section { padding: var(--section-pad) 32px; }
   color: var(--dark);
 }
 
+/* --- Org memberships band --- */
+.orgs-band { background: var(--white); border-top: 1px solid var(--border); padding: 52px 0 60px; }
+.orgs-row { display: flex; align-items: center; justify-content: center; gap: 44px; flex-wrap: wrap; }
+.orgs-row img { height: 62px; width: auto; max-width: 220px; object-fit: contain; filter: grayscale(12%); opacity: 0.92; }
+
 /* --- Contact form states --- */
 .hp-field { position: absolute; left: -9999px; opacity: 0; height: 0; overflow: hidden; }
 .form-privacy { font-size: 0.82rem; color: #8a93a5; margin: -4px 0 4px; }
