@@ -134,7 +134,7 @@ document.addEventListener('DOMContentLoaded', () => {
 // ---------------------------------------------------------------------------
 // Analytics (GA4). Paste the Measurement ID (G-XXXXXXXXXX) from
 // analytics.google.com > Admin > Data streams to activate on all pages.
-const GA_MEASUREMENT_ID = '';
+const GA_MEASUREMENT_ID = 'G-KQRYWP9436';
 
 if (GA_MEASUREMENT_ID) {
   const gs = document.createElement('script');
