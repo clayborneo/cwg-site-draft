@@ -56,6 +56,16 @@
     .lk-tag { font-family: 'DM Sans', sans-serif; font-size: 0.72rem; letter-spacing: 0.22em; text-transform: uppercase; color: #8a93a5; margin-top: 6px; text-align: center; }
     .lk-card .art { flex-direction: column; gap: 26px; padding: 34px 20px; }
     .lk-wrap { text-align: center; }
+
+    .cm { position: relative; width: 160px; height: 160px; display: flex; align-items: center; justify-content: center; }
+    .cm .ini { font-family: 'Alex Brush', cursive; font-size: 62px; color: var(--hot); line-height: 1; margin-top: 10px; }
+    .cm .bf { position: absolute; }
+    .cm.c-circle { border-radius: 50%; background: #fff; border: 3px solid var(--hot); }
+    .cm.c-square { border-radius: 22%; background: var(--blush); }
+    .cm.c-peri { border-radius: 50%; background: var(--peri-light); }
+    .cm.c-stack { border-radius: 12px; background: #fff; border: 1px solid var(--border); flex-direction: column; }
+    .fav-row { display: flex; align-items: center; gap: 18px; margin-top: 14px; justify-content: center; }
+    .fav-scale { display: inline-block; transform-origin: top left; }
     footer { padding: 40px 0 60px; color: #888; font-size: .84rem; }
   </style>
 </head>
@@ -68,6 +78,31 @@
     <p>Feedback from the team: the detailed heritage butterfly is beautiful, but its fine linework fights itself at small sizes. This page collects two rounds of simpler alternatives. <strong>Round 4 marks are drawn fresh</strong>, keeping the brand's character without reusing the old shape. Round 3 marks are simplified derivatives of the original. In any direction, the detailed original can stay in the family as a "legacy" mark for larger, special placements.</p>
   </div>
 </div>
+
+<section style="background:#fff;border-bottom:1px solid var(--border)">
+  <div class="container">
+    <h2>Compact mark &amp; favicon <span style="display:inline-block;background:var(--hot);color:#fff;font-size:.7rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;border-radius:999px;padding:3px 12px;vertical-align:middle;margin-left:10px">Initials + butterfly</span></h2>
+    <p class="note">A square or circle mark using the CwG initials and the butterfly, the modern successor to the original CwG badge. For favicons, social avatars, and app icons; each shown with a favicon-size preview.</p>
+    <div class="grid c4" style="grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));">
+      <div class="card">
+        <div class="art" style="flex-direction:column;"><div class="cm c-circle"><span class="ini">CwG</span><img class="bf" src="assets/svg/butterfly.svg" style="width:34px; top:20px; right:22px; transform:rotate(-10deg);"></div><div class="fav-row"><span class="fav-scale" style="transform:scale(0.2); width:32px; height:32px;"><div class="cm c-circle"><span class="ini">CwG</span><img class="bf" src="assets/svg/butterfly.svg" style="width:34px; top:20px; right:22px; transform:rotate(-10deg);"></div></span><span class="fav-scale" style="transform:scale(0.1); width:16px; height:16px;"><div class="cm c-circle"><span class="ini">CwG</span><img class="bf" src="assets/svg/butterfly.svg" style="width:34px; top:20px; right:22px; transform:rotate(-10deg);"></div></span><span style="font-size:0.72rem; color:#999;">32 px · 16 px</span></div></div>
+        <div class="meta"><h3>C1 · Circle, pink ring</h3><p>Script initials with the butterfly alighting at the upper right. Closest cousin of the original badge.</p></div>
+      </div>
+      <div class="card">
+        <div class="art" style="flex-direction:column;"><div class="cm c-square"><span class="ini">CwG</span><img class="bf" src="assets/svg/butterfly.svg" style="width:34px; top:18px; right:20px; transform:rotate(-10deg);"></div><div class="fav-row"><span class="fav-scale" style="transform:scale(0.2); width:32px; height:32px;"><div class="cm c-square"><span class="ini">CwG</span><img class="bf" src="assets/svg/butterfly.svg" style="width:34px; top:18px; right:20px; transform:rotate(-10deg);"></div></span><span class="fav-scale" style="transform:scale(0.1); width:16px; height:16px;"><div class="cm c-square"><span class="ini">CwG</span><img class="bf" src="assets/svg/butterfly.svg" style="width:34px; top:18px; right:20px; transform:rotate(-10deg);"></div></span><span style="font-size:0.72rem; color:#999;">32 px · 16 px</span></div></div>
+        <div class="meta"><h3>C2 · Squircle, blush</h3><p>Soft app-icon shape on the blush field. Friendliest of the set.</p></div>
+      </div>
+      <div class="card">
+        <div class="art" style="flex-direction:column;"><div class="cm c-peri"><span class="ini">CwG</span><img class="bf" src="assets/svg/butterfly.svg" style="width:34px; top:20px; right:22px; transform:rotate(-10deg);"></div><div class="fav-row"><span class="fav-scale" style="transform:scale(0.2); width:32px; height:32px;"><div class="cm c-peri"><span class="ini">CwG</span><img class="bf" src="assets/svg/butterfly.svg" style="width:34px; top:20px; right:22px; transform:rotate(-10deg);"></div></span><span class="fav-scale" style="transform:scale(0.1); width:16px; height:16px;"><div class="cm c-peri"><span class="ini">CwG</span><img class="bf" src="assets/svg/butterfly.svg" style="width:34px; top:20px; right:22px; transform:rotate(-10deg);"></div></span><span style="font-size:0.72rem; color:#999;">32 px · 16 px</span></div></div>
+        <div class="meta"><h3>C3 · Circle, periwinkle</h3><p>The site's periwinkle as the field; ties the mark to the web palette.</p></div>
+      </div>
+      <div class="card">
+        <div class="art" style="flex-direction:column;"><div class="cm c-stack"><img src="assets/svg/butterfly.svg" style="width:52px; margin-bottom:2px;"><span class="ini" style="font-size:44px; margin-top:0;">CwG</span></div><div class="fav-row"><span class="fav-scale" style="transform:scale(0.2); width:32px; height:32px;"><div class="cm c-stack"><img src="assets/svg/butterfly.svg" style="width:52px; margin-bottom:2px;"><span class="ini" style="font-size:44px; margin-top:0;">CwG</span></div></span><span class="fav-scale" style="transform:scale(0.1); width:16px; height:16px;"><div class="cm c-stack"><img src="assets/svg/butterfly.svg" style="width:52px; margin-bottom:2px;"><span class="ini" style="font-size:44px; margin-top:0;">CwG</span></div></span><span style="font-size:0.72rem; color:#999;">32 px · 16 px</span></div></div>
+        <div class="meta"><h3>C4 · Stacked card</h3><p>Butterfly above the initials on a plain card. Reads well where the shape must stay square.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
 
 <section style="background:#fff;border-bottom:1px solid var(--border)">
   <div class="container">
@@ -140,11 +175,11 @@
         <div class="art">
           <div class="lk-wrap">
             <div class="lk" style="font-size:54px; padding-top:40px;">
-              <img class="bfly" src="assets/svg/butterfly.svg" style="width:30px; top:21px; left:10.5%; transform:rotate(-18deg);">
-              <img class="bfly" src="assets/svg/butterfly.svg" style="width:56px; top:-3px; left:45.5%; transform:rotate(-6deg);">
+              <img class="bfly" src="assets/svg/butterfly.svg" style="width:30px; top:21px; left:13%; transform:rotate(-18deg);">
+              <img class="bfly" src="assets/svg/butterfly.svg" style="width:56px; top:-3px; left:48%; transform:rotate(-6deg);">
               Caring with Grace
             </div>
-            <div class="lk-tag" style="font-size:0.84rem; letter-spacing:0.18em; margin-top:-4px;">Helping those you love live with dignity</div>
+            <div class="lk-tag" style="font-size:0.84rem; letter-spacing:0.18em; margin-top:-9px;">Helping those you love live with dignity</div>
           </div>
         </div>
         <div class="meta"><h3>L5 · Two butterflies, original arrangement</h3><p>The small butterfly above "Caring," the large one over "with," tagline centered close beneath: the 2006 composition, redrawn with today's marks and type.</p></div>
