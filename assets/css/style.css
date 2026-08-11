@@ -669,8 +669,8 @@ section { padding: var(--section-pad) 32px; }
 
 /* --- Org memberships band --- */
 .orgs-band { background: var(--white); border-top: 1px solid var(--border); padding: 52px 0 60px; }
-.orgs-row { display: flex; align-items: center; justify-content: center; gap: 44px; flex-wrap: wrap; }
-.orgs-row img { height: 62px; width: auto; max-width: 220px; object-fit: contain; filter: grayscale(12%); opacity: 0.92; }
+.orgs-row { display: flex; align-items: center; justify-content: center; gap: 30px 40px; flex-wrap: wrap; max-width: 1000px; margin: 0 auto; }
+.orgs-row img { height: 56px; width: auto; max-width: 220px; object-fit: contain; filter: grayscale(12%); opacity: 0.92; }
 
 /* --- Contact form states --- */
 .hp-field { position: absolute; left: -9999px; opacity: 0; height: 0; overflow: hidden; }
