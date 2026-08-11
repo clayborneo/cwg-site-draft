@@ -343,11 +343,11 @@ p { line-height: 1.7; }
   margin: 2px 0 0;
   margin-bottom: 0;
 }
-.carousel-content .hero-explainer {
-  margin-left: 144px;
-  max-width: 540px;
-}
-.carousel-slide[data-slide="0"] .carousel-ctas { margin-left: 144px; }
+.carousel-content .hero-explainer { max-width: 540px; }
+.hero-l5 { position: relative; display: inline-block; padding-top: 58px; }
+.hero-l5 .hl5-b1 { position: absolute; width: 42px; height: auto; top: 34px; left: 13%; transform: rotate(-18deg); }
+.hero-l5 .hl5-b2 { position: absolute; width: 78px; height: auto; top: 2px; left: 48%; transform: rotate(-6deg); }
+.hero-l5 .hero-lockup-tagline { text-align: center; }
 .carousel-eyebrow {
   display: inline-block;
   font-family: var(--body-font);
@@ -452,8 +452,9 @@ p { line-height: 1.7; }
   .carousel-content { padding: 0 28px; }
   .carousel-content h1 { font-size: 2.2rem; }
   .hero-lockup { flex-direction: column; align-items: flex-start; gap: 16px; margin-bottom: 24px; }
-  .carousel-content .hero-explainer { margin-left: 0; }
-  .carousel-slide[data-slide="0"] .carousel-ctas { margin-left: 0; }
+  .hero-l5 { padding-top: 34px; }
+  .hero-l5 .hl5-b1 { width: 26px; top: 18px; }
+  .hero-l5 .hl5-b2 { width: 46px; top: -2px; }
   .hero-lockup img { height: 84px; }
   .carousel-content .hero-lockup-name { font-size: 2.2rem; }
   .carousel-content .hero-lockup-tagline { font-size: 1rem; }
@@ -669,7 +670,19 @@ section { padding: var(--section-pad) 32px; }
 
 /* --- Org memberships band --- */
 .orgs-band { background: var(--white); border-top: 1px solid var(--border); padding: 52px 0 60px; }
-.orgs-row { display: flex; align-items: center; justify-content: center; gap: 30px 40px; flex-wrap: wrap; max-width: 1000px; margin: 0 auto; }
+.orgs-row {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(120px, auto));
+  justify-content: center;
+  align-items: center;
+  gap: 36px 64px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+.orgs-row img { justify-self: center; }
+@media (max-width: 720px) {
+  .orgs-row { grid-template-columns: repeat(2, minmax(110px, auto)); gap: 28px 40px; }
+}
 .orgs-row img { height: 56px; width: auto; max-width: 220px; object-fit: contain; filter: grayscale(12%); opacity: 0.92; }
 
 /* --- Contact form states --- */
