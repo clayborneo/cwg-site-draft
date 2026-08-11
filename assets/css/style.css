@@ -345,8 +345,8 @@ p { line-height: 1.7; }
 }
 .carousel-content .hero-explainer { max-width: 540px; }
 .hero-l5 { position: relative; display: inline-block; padding-top: 58px; }
-.hero-l5 .hl5-b1 { position: absolute; width: 42px; height: auto; top: 34px; left: 13%; transform: rotate(-18deg); }
-.hero-l5 .hl5-b2 { position: absolute; width: 78px; height: auto; top: 2px; left: 48%; transform: rotate(-6deg); }
+.hero-l5 .hl5-b1 { position: absolute; width: 42px; height: auto; top: 49px; left: 23%; transform: rotate(-18deg); }
+.hero-l5 .hl5-b2 { position: absolute; width: 78px; height: auto; top: 2px; left: 53%; transform: rotate(-6deg); }
 .hero-l5 .hero-lockup-tagline { text-align: center; }
 .carousel-eyebrow {
   display: inline-block;
@@ -453,7 +453,7 @@ p { line-height: 1.7; }
   .carousel-content h1 { font-size: 2.2rem; }
   .hero-lockup { flex-direction: column; align-items: flex-start; gap: 16px; margin-bottom: 24px; }
   .hero-l5 { padding-top: 34px; }
-  .hero-l5 .hl5-b1 { width: 26px; top: 18px; }
+  .hero-l5 .hl5-b1 { width: 26px; top: 26px; }
   .hero-l5 .hl5-b2 { width: 46px; top: -2px; }
   .hero-lockup img { height: 84px; }
   .carousel-content .hero-lockup-name { font-size: 2.2rem; }
