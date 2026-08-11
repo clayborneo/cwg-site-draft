@@ -653,10 +653,13 @@ section { padding: var(--section-pad) 32px; }
 }
 .values-list {
   list-style: none;
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: 24px;
+  display: flex;
+  justify-content: center;
+  gap: 18px 44px;
+  flex-wrap: wrap;
   text-align: center;
+  max-width: 880px;
+  margin: 0 auto;
 }
 .values-list li {
   font-family: var(--heading-font);
@@ -737,11 +740,15 @@ section { padding: var(--section-pad) 32px; }
 }
 .team-card:hover { box-shadow: 0 4px 14px rgba(0,0,0,0.08); }
 .team-photo {
+  width: 70%;
   aspect-ratio: 1;
+  border-radius: 50%;
+  margin: 24px auto 0;
   background: var(--light);
-  background-size: cover;
-  background-position: center;
+  background-size: 116%;
+  background-position: center 32%;
   position: relative;
+  border: 3px solid var(--primary-light);
 }
 .team-photo.placeholder {
   display: flex;
