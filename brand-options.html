@@ -3,134 +3,187 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Logo Options | Caring with Grace (internal)</title>
+  <title>Logo Refresh · Botanical Direction | Caring with Grace (internal)</title>
   <meta name="robots" content="noindex">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Alex+Brush&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Alex+Brush&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
   <link rel="icon" type="image/svg+xml" href="assets/svg/badge.svg">
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    :root {
-      --hot: #E84880; --soft: #F6A8C8; --blush: #FDEFF5;
-      --peri: #6E7AC2; --peri-light: #E6EBF7; --peri-dark: #4051A1;
-      --ink: #231F20; --border: #E8E8E8;
-    }
-    body { font-family: 'DM Sans', Arial, sans-serif; color: var(--ink); background: #FAFAFA; line-height: 1.6; -webkit-font-smoothing: antialiased; }
-    .container { max-width: 1120px; margin: 0 auto; padding: 0 24px; }
-    .hero { background: linear-gradient(135deg, #fff 0%, var(--peri-light) 100%); border-bottom: 3px solid var(--hot); padding: 56px 0 44px; }
-    .hero h1 { font-family: 'DM Serif Display', serif; font-size: 2.4rem; }
-    .kicker { text-transform: uppercase; letter-spacing: .18em; font-size: .78rem; color: var(--hot); font-weight: 700; margin-bottom: 8px; }
-    .hero p { max-width: 740px; color: #555; margin-top: 12px; }
-    section { padding: 48px 0 10px; }
-    h2 { font-family: 'DM Serif Display', serif; font-size: 1.8rem; margin-bottom: 6px; }
-    .note { color: #666; max-width: 760px; margin-bottom: 26px; }
-    .grid { display: grid; gap: 22px; margin-bottom: 36px; }
-    .c2 { grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); }
-    .c4 { grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); }
-    .card { background: #fff; border: 1px solid var(--border); border-radius: 14px; overflow: hidden; }
-    .card .art { display: flex; align-items: center; justify-content: center; padding: 26px; min-height: 190px; }
-    .card .meta { border-top: 1px solid var(--border); padding: 12px 18px 15px; }
-    .card .meta h3 { font-size: 1rem; }
-    .card .meta p { font-size: .86rem; color: #666; margin-top: 2px; }
-    .card img { max-width: 100%; height: auto; }
-
-    table.gauntlet { width: 100%; border-collapse: collapse; background: #fff; border: 1px solid var(--border); border-radius: 14px; overflow: hidden; }
-    .gauntlet th, .gauntlet td { padding: 14px 16px; text-align: center; border-bottom: 1px solid var(--border); }
-    .gauntlet th { font-size: .78rem; letter-spacing: .1em; text-transform: uppercase; color: #888; background: #FCFCFD; }
-    .gauntlet td:first-child { text-align: left; font-weight: 700; font-size: .92rem; }
-    .gauntlet img { vertical-align: middle; }
-
-    .headerdemo { background: #fff; border: 1px solid var(--border); border-radius: 12px; display: flex; align-items: center; gap: 13px; padding: 14px 22px; margin-bottom: 14px; }
-    .headerdemo img { height: 44px; width: auto; }
-    .headerdemo .word { font-family: 'DM Serif Display', serif; font-size: 1.35rem; color: var(--hot); white-space: nowrap; }
-    .headerdemo .navfake { margin-left: auto; display: flex; gap: 20px; color: #7a8494; font-size: .85rem; }
-    .headerdemo .cta { background: var(--peri); color: #fff; border-radius: 8px; padding: 7px 14px; font-size: .85rem; font-weight: 600; }
-
-    .pairing { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; margin-bottom: 40px; }
-    .pairing .card .art { min-height: 170px; }
-    @media (max-width: 720px) { .pairing { grid-template-columns: 1fr; } }
-
-    .lk { position: relative; display: inline-block; font-family: 'Alex Brush', cursive; color: var(--hot); white-space: nowrap; }
-    .lk .bfly { position: absolute; }
-    .lk-tag { font-family: 'DM Sans', sans-serif; font-size: 0.72rem; letter-spacing: 0.22em; text-transform: uppercase; color: #8a93a5; margin-top: 6px; text-align: center; }
-    .lk-card .art { flex-direction: column; gap: 26px; padding: 34px 20px; }
-    .lk-wrap { text-align: center; }
-
-    .cm { position: relative; width: 160px; height: 160px; display: flex; align-items: center; justify-content: center; }
-    .cm .ini { font-family: 'Alex Brush', cursive; font-size: 62px; color: var(--hot); line-height: 1; margin-top: 10px; }
-    .cm .bf { position: absolute; }
-    .cm.c-circle { border-radius: 50%; background: #fff; border: 3px solid var(--hot); }
-    .cm.c-square { border-radius: 22%; background: var(--blush); }
-    .cm.c-peri { border-radius: 50%; background: var(--peri-light); }
-    .cm.c-stack { border-radius: 12px; background: #fff; border: 1px solid var(--border); flex-direction: column; }
-    .fav-row { display: flex; align-items: center; gap: 18px; margin-top: 14px; justify-content: center; }
-    .fav-scale { display: inline-block; transform-origin: top left; }
-    footer { padding: 40px 0 60px; color: #888; font-size: .84rem; }
+    :root { --plum:#45274D; --teal:#46625E; --gold:#BC9D6A; --ink:#231F20; --border:#E8E4DD; }
+    body { font-family:'DM Sans',sans-serif; color:var(--ink); background:#FAF8F4; line-height:1.6; -webkit-font-smoothing:antialiased; }
+    .container { max-width:1120px; margin:0 auto; padding:0 24px; }
+    .hero { background:linear-gradient(135deg,#fff 0%,#F1EBE0 100%); border-bottom:3px solid var(--gold); padding:48px 0 40px; }
+    .kicker { text-transform:uppercase; letter-spacing:.18em; font-size:.78rem; color:var(--teal); font-weight:700; margin-bottom:8px; }
+    h1 { font-family:'Cormorant Garamond',serif; font-weight:500; font-size:2.4rem; color:var(--plum); }
+    .hero p { max-width:740px; color:#5a5350; margin-top:10px; }
+    section { padding:48px 0 10px; }
+    h2 { font-family:'Cormorant Garamond',serif; font-weight:500; font-size:1.9rem; color:var(--plum); margin-bottom:6px; }
+    .note { color:#6b635f; max-width:760px; margin-bottom:26px; }
+    .grid { display:grid; gap:22px; margin-bottom:38px; grid-template-columns:repeat(auto-fit,minmax(330px,1fr)); }
+    .card { background:#fff; border:1px solid var(--border); border-radius:8px; overflow:hidden; }
+    .card .art { display:flex; align-items:center; justify-content:center; padding:30px 20px; min-height:230px; }
+    .card .meta { border-top:1px solid var(--border); padding:12px 18px 15px; }
+    .card .meta h3 { font-size:1rem; color:var(--plum); }
+    .card .meta p { font-size:.86rem; color:#6b635f; margin-top:2px; }
+    .card img.opt { max-width:100%; height:auto; }
+    footer { padding:40px 0 60px; color:#8a827c; font-size:.84rem; }
   </style>
 </head>
 <body>
 
-<div class="hero" style="padding: 36px 0 30px;">
+<div class="hero">
   <div class="container">
-    <div class="kicker">Internal · Logo direction · August 2026</div>
-    <h1 style="font-size:1.9rem;">Caring with Grace: the working logo</h1>
+    <div class="kicker">Internal · Logo refresh · September 2026</div>
+    <h1>The botanical direction</h1>
+    <p>Three candidates from the team, followed by versions set in the website's script, and ten further explorations that vary the vines, leaves, and lettering. All colors drawn from the originals: plum, teal, sage, gold, mauve.</p>
   </div>
 </div>
 
 <section>
   <div class="container">
-    <h2>The lockup · L5 <span style="display:inline-block;background:var(--hot);color:#fff;font-size:.7rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;border-radius:999px;padding:3px 12px;vertical-align:middle;margin-left:10px">Two butterflies, original arrangement</span></h2>
-    <p class="note">The working logo: the 2006 composition, redrawn. Small butterfly settling onto "Caring," the large one over "with," tagline close beneath.</p>
-    <div class="card lk-card" style="margin-bottom:40px">
-      <div class="art">
-        <img src="assets/svg/l5-lockup.svg?v=3" style="max-width:640px; width:100%;" alt="Caring with Grace lockup">
-      </div>
-      <div class="meta"><h3>L5 · Two butterflies, original arrangement</h3><p>A true vector: text converted to outlines, butterflies embedded. This exact file is on the homepage hero and is print-ready.</p></div>
+    <h2>The three on the table</h2>
+    <p class="note">As shared by the team.</p>
+    <div class="grid">
+      <div class="card"><div class="art"><img class="opt" src="assets/img/brand-v5/karen-opt1.png"></div><div class="meta"><h3>Option 1</h3><p>Sprig at the upper right, gold underline sweep.</p></div></div>
+      <div class="card"><div class="art"><img class="opt" src="assets/img/brand-v5/karen-opt2.png"></div><div class="meta"><h3>Option 2</h3><p>Vertical sprig at left, centered stack.</p></div></div>
+      <div class="card"><div class="art"><img class="opt" src="assets/img/brand-v5/karen-opt3.png"></div><div class="meta"><h3>Option 3</h3><p>Branch extending from the "with" line.</p></div></div>
     </div>
   </div>
 </section>
 
-<section style="background:#fff;border-bottom:1px solid var(--border)">
+<section style="background:#fff; border-top:1px solid var(--border); border-bottom:1px solid var(--border);">
   <div class="container">
-    <h2>Compact mark &amp; favicon <span style="display:inline-block;background:var(--hot);color:#fff;font-size:.7rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;border-radius:999px;padding:3px 12px;vertical-align:middle;margin-left:10px">Initials + butterfly</span></h2>
-    <p class="note">A square or circle mark using the CwG initials and the butterfly, the modern successor to the original CwG badge. For favicons, social avatars, and app icons; each shown with a favicon-size preview.</p>
-    <div class="grid c4" style="grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));">
+    <h2>Same vines, our script</h2>
+    <p class="note">The identical three arrangements and sprigs, with the lettering in the script currently on the draft site.</p>
+    <div class="grid">
       <div class="card">
-        <div class="art" style="flex-direction:column;"><div class="cm c-circle"><span class="ini">CwG</span><img class="bf" src="assets/svg/butterfly.svg" style="width:34px; top:28px; right:38px; transform:rotate(-10deg);"></div><div class="fav-row"><span class="fav-scale" style="transform:scale(0.2); width:32px; height:32px;"><div class="cm c-circle"><span class="ini">CwG</span><img class="bf" src="assets/svg/butterfly.svg" style="width:34px; top:28px; right:38px; transform:rotate(-10deg);"></div></span><span class="fav-scale" style="transform:scale(0.1); width:16px; height:16px;"><div class="cm c-circle"><span class="ini">CwG</span><img class="bf" src="assets/svg/butterfly.svg" style="width:34px; top:28px; right:38px; transform:rotate(-10deg);"></div></span><span style="font-size:0.72rem; color:#999;">32 px · 16 px</span></div></div>
-        <div class="meta"><h3>C1 · Circle, pink ring</h3><p>Script initials with the butterfly alighting at the upper right. Closest cousin of the original badge.</p></div>
-      </div>
+      <div class="art" style="flex-direction:column; min-height:250px;"><div style="position:relative; display:inline-block; padding:8px 64px 0 0;">
+    <div style="font-family:'Alex Brush',cursive; line-height:1.02; text-align:left; white-space:nowrap;">
+      <div style="font-size:44px; color:#45274D;">Caring</div>
+      <div style="margin:0 0 0 26px;"><span style="font-size:21px; color:#46625E;">with</span>
+      <span style="font-size:44px; color:#45274D; margin-left:8px;">Grace</span></div>
+    </div>
+    <img src="assets/img/brand-v5/sprig1.png" style="position:absolute; width:88px; right:-4px; top:-28px;">
+    <svg viewBox="0 0 460 34" width="250" style="display:block; margin:4px 0 0 10px;"><path d="M6 8 C 130 34 330 34 454 4" fill="none" stroke="#BC9D6A" stroke-width="2.6" stroke-linecap="round"/></svg>
+  </div></div>
+      <div class="meta"><h3>S1 · Option 1, site script</h3><p>Same sprig and gold sweep; Alex Brush lettering.</p></div>
+    </div>
       <div class="card">
-        <div class="art" style="flex-direction:column;"><div class="cm c-square"><span class="ini">CwG</span><img class="bf" src="assets/svg/butterfly.svg" style="width:34px; top:26px; right:36px; transform:rotate(-10deg);"></div><div class="fav-row"><span class="fav-scale" style="transform:scale(0.2); width:32px; height:32px;"><div class="cm c-square"><span class="ini">CwG</span><img class="bf" src="assets/svg/butterfly.svg" style="width:34px; top:26px; right:36px; transform:rotate(-10deg);"></div></span><span class="fav-scale" style="transform:scale(0.1); width:16px; height:16px;"><div class="cm c-square"><span class="ini">CwG</span><img class="bf" src="assets/svg/butterfly.svg" style="width:34px; top:26px; right:36px; transform:rotate(-10deg);"></div></span><span style="font-size:0.72rem; color:#999;">32 px · 16 px</span></div></div>
-        <div class="meta"><h3>C2 · Squircle, blush</h3><p>Soft app-icon shape on the blush field. Friendliest of the set.</p></div>
-      </div>
+      <div class="art" style="flex-direction:column; min-height:250px;"><div style="display:flex; align-items:center; gap:26px;">
+  <img src="assets/img/brand-v5/sprig2.png" style="width:74px; flex-shrink:0;">
+  <div>
+    <div style="position:relative; text-align:center; font-family:'Alex Brush',cursive; line-height:1;">
+      <div style="font-size:46px; color:#45274D;">Caring</div>
+      <div style="font-size:22px; color:#46625E; margin:2px 0;">with</div>
+      <div style="font-size:46px; color:#45274D;">Grace</div>
+    </div>
+    <svg viewBox="0 0 460 34" width="230" style="display:block; margin:4px auto 0;"><path d="M6 8 C 130 34 330 34 454 4" fill="none" stroke="#BC9D6A" stroke-width="2.6" stroke-linecap="round"/></svg>
+  </div>
+</div></div>
+      <div class="meta"><h3>S2 · Option 2, site script</h3><p>Left sprig, centered script stack.</p></div>
+    </div>
       <div class="card">
-        <div class="art" style="flex-direction:column;"><div class="cm c-peri"><span class="ini">CwG</span><img class="bf" src="assets/svg/butterfly.svg" style="width:34px; top:28px; right:38px; transform:rotate(-10deg);"></div><div class="fav-row"><span class="fav-scale" style="transform:scale(0.2); width:32px; height:32px;"><div class="cm c-peri"><span class="ini">CwG</span><img class="bf" src="assets/svg/butterfly.svg" style="width:34px; top:28px; right:38px; transform:rotate(-10deg);"></div></span><span class="fav-scale" style="transform:scale(0.1); width:16px; height:16px;"><div class="cm c-peri"><span class="ini">CwG</span><img class="bf" src="assets/svg/butterfly.svg" style="width:34px; top:28px; right:38px; transform:rotate(-10deg);"></div></span><span style="font-size:0.72rem; color:#999;">32 px · 16 px</span></div></div>
-        <div class="meta"><h3>C3 · Circle, periwinkle</h3><p>The site's periwinkle as the field; ties the mark to the web palette.</p></div>
-      </div>
+      <div class="art" style="flex-direction:column; min-height:250px;"><div style="position:relative; display:inline-block; text-align:left; font-family:'Alex Brush',cursive; line-height:1.02;">
+  <div style="font-size:58px; color:#45274D;">Caring</div>
+  <div style="position:relative; margin:2px 0;">
+    <span style="font-size:26px; color:#46625E;">with</span>
+    <img src="assets/img/brand-v5/sprig3.png" style="position:absolute; width:190px; left:84px; top:-40px;">
+  </div>
+  <div style="font-size:58px; color:#45274D; margin-left:56px;">Grace</div>
+</div></div>
+      <div class="meta"><h3>S3 · Option 3, site script</h3><p>The with-line branch, script staggering.</p></div>
+    </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <h2>Ten explorations</h2>
+    <p class="note">Varying the vine and leaf drawing (all vector, drawn fresh) and the typography. B7 shows the direction in the website's current palette for comparison.</p>
+    <div class="grid">
       <div class="card">
-        <div class="art" style="flex-direction:column;">
-          <img src="assets/svg/badge.svg" style="width:160px" alt="Legacy CwG badge">
-          <div class="fav-row">
-            <img src="assets/svg/badge.svg" width="32" height="32">
-            <img src="assets/svg/badge.svg" width="16" height="16">
-            <span style="font-size:0.72rem; color:#999;">32 px · 16 px</span>
-          </div>
-        </div>
-        <div class="meta"><h3>C0 · Legacy CwG badge</h3><p>The vectorized original badge, today's favicon, for comparison alongside the new candidates.</p></div>
-      </div>
-      <div class="card">
-        <div class="art" style="flex-direction:column;"><div class="cm c-stack"><img src="assets/svg/butterfly.svg" style="width:52px; margin-bottom:2px;"><span class="ini" style="font-size:44px; margin-top:0;">CwG</span></div><div class="fav-row"><span class="fav-scale" style="transform:scale(0.2); width:32px; height:32px;"><div class="cm c-stack"><img src="assets/svg/butterfly.svg" style="width:52px; margin-bottom:2px;"><span class="ini" style="font-size:44px; margin-top:0;">CwG</span></div></span><span class="fav-scale" style="transform:scale(0.1); width:16px; height:16px;"><div class="cm c-stack"><img src="assets/svg/butterfly.svg" style="width:52px; margin-bottom:2px;"><span class="ini" style="font-size:44px; margin-top:0;">CwG</span></div></span><span style="font-size:0.72rem; color:#999;">32 px · 16 px</span></div></div>
-        <div class="meta"><h3>C4 · Stacked card</h3><p>Butterfly above the initials on a plain card. Reads well where the shape must stay square.</p></div>
-      </div>
+      <div class="art" style="flex-direction:column; min-height:250px;"><div><div style="text-align:center; font-family:'Cormorant Garamond',serif; line-height:1.08;">
+      <div style="font-size:44px; color:#45274D;">Caring</div>
+      <div style="font-size:20px; color:#46625E; font-style:italic; margin:1px 0;">with</div>
+      <div style="font-size:44px; color:#45274D;">Grace</div>
+    </div><div style="margin-top:-6px;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 470 70" width="330" height="49"><path d="M10 26 C 130 52 320 52 450 20" fill="none" stroke="#B79564" stroke-width="2.4" stroke-linecap="round"/><path d="M300 40 C 360 38 410 30 452 18" fill="none" stroke="#5C6B5E" stroke-width="1.8" stroke-linecap="round"/><g transform="translate(321.2,39.0) rotate(-45.4)"><path d="M0 0 C 2.7 -3.6 8.2 -3.7 10.9 0 C 8.2 3.7 2.7 3.6 0 0 Z" fill="#81637B"/><path d="M2 0 L 9.0 0" stroke="rgba(255,255,255,0.35)" stroke-width="0.80"/></g><g transform="translate(349.7,36.8) rotate(36.4)"><path d="M0 0 C 3.4 -4.4 10.1 -4.6 13.4 0 C 10.1 4.6 3.4 4.4 0 0 Z" fill="#79817A"/><path d="M2 0 L 11.0 0" stroke="rgba(255,255,255,0.35)" stroke-width="0.80"/></g><g transform="translate(376.6,33.6) rotate(-49.9)"><path d="M0 0 C 4.0 -5.3 12.1 -5.5 16.2 0 C 12.1 5.5 4.0 5.3 0 0 Z" fill="#B79564"/><path d="M2 0 L 13.3 0" stroke="rgba(255,255,255,0.35)" stroke-width="0.80"/></g><g transform="translate(402.0,29.6) rotate(31.7)"><path d="M0 0 C 3.6 -4.7 10.8 -4.9 14.4 0 C 10.8 4.9 3.6 4.7 0 0 Z" fill="#79817A"/><path d="M2 0 L 11.8 0" stroke="rgba(255,255,255,0.35)" stroke-width="0.80"/></g><g transform="translate(425.8,24.7) rotate(-54.8)"><path d="M0 0 C 4.3 -5.7 12.9 -5.9 17.2 0 C 12.9 5.9 4.3 5.7 0 0 Z" fill="#81637B"/><path d="M2 0 L 14.1 0" stroke="rgba(255,255,255,0.35)" stroke-width="0.80"/></g><g transform="translate(448.2,19.1) rotate(26.5)"><path d="M0 0 C 5.1 -6.7 15.3 -6.9 20.4 0 C 15.3 6.9 5.1 6.7 0 0 Z" fill="#AB6F7C"/><path d="M2 0 L 16.7 0" stroke="rgba(255,255,255,0.35)" stroke-width="0.92"/></g><g transform="translate(452.0,18.0) rotate(-15.9)"><path d="M0 0 C 3.9 -5.2 11.8 -5.4 15.8 0 C 11.8 5.4 3.9 5.2 0 0 Z" fill="#79817A"/><path d="M2 0 L 12.9 0" stroke="rgba(255,255,255,0.35)" stroke-width="0.80"/></g></svg></div></div></div>
+      <div class="meta"><h3>B1 · Serif stack, leafed underline</h3><p>Cormorant stack with the gold arc growing leaves along its right half.</p></div>
+    </div><div class="card">
+      <div class="art" style="flex-direction:column; min-height:250px;"><div style="position:relative; display:inline-block;">
+    <span style="font-family:'Alex Brush',cursive; font-size:44px; color:#45274D; white-space:nowrap;">Caring <span style="color:#46625E;">with</span> Grace</span>
+    <div style="position:absolute; right:-58px; top:-22px;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 55" width="80" height="55"><path d="M6 44 C 22 30 34 20 52 8" fill="none" stroke="#5C6B5E" stroke-width="2.2" stroke-linecap="round"/><g transform="translate(11.6,39.1) rotate(-82.8)"><path d="M0 0 C 2.4 -3.1 7.1 -3.2 9.5 0 C 7.1 3.2 2.4 3.1 0 0 Z" fill="#81637B"/><path d="M2 0 L 7.8 0" stroke="rgba(255,255,255,0.35)" stroke-width="0.80"/></g><g transform="translate(30.2,23.7) rotate(4.0)"><path d="M0 0 C 3.3 -4.4 10.0 -4.5 13.3 0 C 10.0 4.5 3.3 4.4 0 0 Z" fill="#79817A"/><path d="M2 0 L 10.9 0" stroke="rgba(255,255,255,0.35)" stroke-width="0.80"/></g><g transform="translate(50.4,9.1) rotate(-76.0)"><path d="M0 0 C 4.4 -5.8 13.2 -6.0 17.7 0 C 13.2 6.0 4.4 5.8 0 0 Z" fill="#B79564"/><path d="M2 0 L 14.5 0" stroke="rgba(255,255,255,0.35)" stroke-width="0.80"/></g><g transform="translate(52.0,8.0) rotate(-33.7)"><path d="M0 0 C 3.4 -4.5 10.2 -4.7 13.7 0 C 10.2 4.7 3.4 4.5 0 0 Z" fill="#79817A"/><path d="M2 0 L 11.2 0" stroke="rgba(255,255,255,0.35)" stroke-width="0.80"/></g></svg></div>
+  </div></div>
+      <div class="meta"><h3>B2 · Script line, trailing sprig</h3><p>One-line site script; a small branch escapes from the end of Grace.</p></div>
+    </div><div class="card">
+      <div class="art" style="flex-direction:column; min-height:250px;"><div style="text-align:center;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 55" width="80" height="55"><path d="M6 44 C 22 30 34 20 52 8" fill="none" stroke="#5C6B5E" stroke-width="2.2" stroke-linecap="round"/><g transform="translate(11.6,39.1) rotate(-82.8)"><path d="M0 0 C 2.4 -3.1 7.1 -3.2 9.5 0 C 7.1 3.2 2.4 3.1 0 0 Z" fill="#81637B"/><path d="M2 0 L 7.8 0" stroke="rgba(255,255,255,0.35)" stroke-width="0.80"/></g><g transform="translate(30.2,23.7) rotate(4.0)"><path d="M0 0 C 3.3 -4.4 10.0 -4.5 13.3 0 C 10.0 4.5 3.3 4.4 0 0 Z" fill="#79817A"/><path d="M2 0 L 10.9 0" stroke="rgba(255,255,255,0.35)" stroke-width="0.80"/></g><g transform="translate(50.4,9.1) rotate(-76.0)"><path d="M0 0 C 4.4 -5.8 13.2 -6.0 17.7 0 C 13.2 6.0 4.4 5.8 0 0 Z" fill="#B79564"/><path d="M2 0 L 14.5 0" stroke="rgba(255,255,255,0.35)" stroke-width="0.80"/></g><g transform="translate(52.0,8.0) rotate(-33.7)"><path d="M0 0 C 3.4 -4.5 10.2 -4.7 13.7 0 C 10.2 4.7 3.4 4.5 0 0 Z" fill="#79817A"/><path d="M2 0 L 11.2 0" stroke="rgba(255,255,255,0.35)" stroke-width="0.80"/></g></svg><div style="font-family:'Cormorant Garamond',serif; font-size:26px; letter-spacing:0.34em; color:#45274D; margin-top:6px;">CARING <span style="color:#46625E;">WITH</span> GRACE</div></div></div>
+      <div class="meta"><h3>B3 · Quiet caps, crown sprig</h3><p>Letterspaced Cormorant caps with a small centered branch above.</p></div>
+    </div><div class="card">
+      <div class="art" style="flex-direction:column; min-height:250px;"><div style="display:flex; align-items:center; gap:14px;">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 150 175" width="96" height="112"><path d="M120 10 C 50 30 18 90 30 160" fill="none" stroke="#5C6B5E" stroke-width="2.2" stroke-linecap="round"/><g transform="translate(96.5,18.9) rotate(112.4)"><path d="M0 0 C 2.7 -3.6 8.2 -3.7 10.9 0 C 8.2 3.7 2.7 3.6 0 0 Z" fill="#81637B"/><path d="M2 0 L 9.0 0" stroke="rgba(255,255,255,0.35)" stroke-width="0.80"/></g><g transform="translate(76.0,31.1) rotate(185.8)"><path d="M0 0 C 3.3 -4.3 9.8 -4.5 13.1 0 C 9.8 4.5 3.3 4.3 0 0 Z" fill="#79817A"/><path d="M2 0 L 10.7 0" stroke="rgba(255,255,255,0.35)" stroke-width="0.80"/></g><g transform="translate(59.1,46.1) rotate(90.7)"><path d="M0 0 C 3.8 -5.1 11.5 -5.2 15.4 0 C 11.5 5.2 3.8 5.1 0 0 Z" fill="#B79564"/><path d="M2 0 L 12.6 0" stroke="rgba(255,255,255,0.35)" stroke-width="0.80"/></g><g transform="translate(45.7,63.8) rotate(163.6)"><path d="M0 0 C 3.3 -4.4 10.0 -4.6 13.4 0 C 10.0 4.6 3.3 4.4 0 0 Z" fill="#79817A"/><path d="M2 0 L 11.0 0" stroke="rgba(255,255,255,0.35)" stroke-width="0.80"/></g><g transform="translate(36.0,83.7) rotate(68.7)"><path d="M0 0 C 3.9 -5.2 11.8 -5.4 15.8 0 C 11.8 5.4 3.9 5.2 0 0 Z" fill="#81637B"/><path d="M2 0 L 13.0 0" stroke="rgba(255,255,255,0.35)" stroke-width="0.80"/></g><g transform="translate(29.9,105.5) rotate(142.5)"><path d="M0 0 C 4.6 -6.1 13.8 -6.3 18.4 0 C 13.8 6.3 4.6 6.1 0 0 Z" fill="#AB6F7C"/><path d="M2 0 L 15.1 0" stroke="rgba(255,255,255,0.35)" stroke-width="0.83"/></g><g transform="translate(27.6,129.0) rotate(49.0)"><path d="M0 0 C 4.0 -5.2 11.9 -5.4 15.9 0 C 11.9 5.4 4.0 5.2 0 0 Z" fill="#79817A"/><path d="M2 0 L 13.0 0" stroke="rgba(255,255,255,0.35)" stroke-width="0.80"/></g><g transform="translate(29.0,153.7) rotate(124.3)"><path d="M0 0 C 4.6 -6.1 13.9 -6.3 18.5 0 C 13.9 6.3 4.6 6.1 0 0 Z" fill="#B79564"/><path d="M2 0 L 15.2 0" stroke="rgba(255,255,255,0.35)" stroke-width="0.83"/></g><g transform="translate(30.0,160.0) rotate(80.3)"><path d="M0 0 C 3.9 -5.2 11.8 -5.4 15.8 0 C 11.8 5.4 3.9 5.2 0 0 Z" fill="#81637B"/><path d="M2 0 L 12.9 0" stroke="rgba(255,255,255,0.35)" stroke-width="0.80"/></g></svg>
+    <div style="text-align:center;">
+      <div style="font-family:'DM Sans',sans-serif; font-size:13px; letter-spacing:0.32em; color:#46625E;">CARING WITH</div>
+      <div style="font-family:'Alex Brush',cursive; font-size:60px; color:#45274D; line-height:1;">Grace</div>
+    </div>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 150 175" width="96" height="112"><path d="M30 10 C 100 30 132 90 120 160" fill="none" stroke="#5C6B5E" stroke-width="2.2" stroke-linecap="round"/><g transform="translate(53.5,18.9) rotate(-16.4)"><path d="M0 0 C 2.7 -3.6 8.2 -3.7 10.9 0 C 8.2 3.7 2.7 3.6 0 0 Z" fill="#81637B"/><path d="M2 0 L 9.0 0" stroke="rgba(255,255,255,0.35)" stroke-width="0.80"/></g><g transform="translate(74.0,31.1) rotate(78.2)"><path d="M0 0 C 3.3 -4.3 9.8 -4.5 13.1 0 C 9.8 4.5 3.3 4.3 0 0 Z" fill="#79817A"/><path d="M2 0 L 10.7 0" stroke="rgba(255,255,255,0.35)" stroke-width="0.80"/></g><g transform="translate(90.9,46.1) rotate(5.3)"><path d="M0 0 C 3.8 -5.1 11.5 -5.2 15.4 0 C 11.5 5.2 3.8 5.1 0 0 Z" fill="#B79564"/><path d="M2 0 L 12.6 0" stroke="rgba(255,255,255,0.35)" stroke-width="0.80"/></g><g transform="translate(104.3,63.8) rotate(100.4)"><path d="M0 0 C 3.3 -4.4 10.0 -4.6 13.4 0 C 10.0 4.6 3.3 4.4 0 0 Z" fill="#79817A"/><path d="M2 0 L 11.0 0" stroke="rgba(255,255,255,0.35)" stroke-width="0.80"/></g><g transform="translate(114.0,83.7) rotate(27.3)"><path d="M0 0 C 3.9 -5.2 11.8 -5.4 15.8 0 C 11.8 5.4 3.9 5.2 0 0 Z" fill="#81637B"/><path d="M2 0 L 13.0 0" stroke="rgba(255,255,255,0.35)" stroke-width="0.80"/></g><g transform="translate(120.1,105.5) rotate(121.5)"><path d="M0 0 C 4.6 -6.1 13.8 -6.3 18.4 0 C 13.8 6.3 4.6 6.1 0 0 Z" fill="#AB6F7C"/><path d="M2 0 L 15.1 0" stroke="rgba(255,255,255,0.35)" stroke-width="0.83"/></g><g transform="translate(122.4,129.0) rotate(47.0)"><path d="M0 0 C 4.0 -5.2 11.9 -5.4 15.9 0 C 11.9 5.4 4.0 5.2 0 0 Z" fill="#79817A"/><path d="M2 0 L 13.0 0" stroke="rgba(255,255,255,0.35)" stroke-width="0.80"/></g><g transform="translate(121.0,153.7) rotate(139.7)"><path d="M0 0 C 4.6 -6.1 13.9 -6.3 18.5 0 C 13.9 6.3 4.6 6.1 0 0 Z" fill="#B79564"/><path d="M2 0 L 15.2 0" stroke="rgba(255,255,255,0.35)" stroke-width="0.83"/></g><g transform="translate(120.0,160.0) rotate(99.7)"><path d="M0 0 C 3.9 -5.2 11.8 -5.4 15.8 0 C 11.8 5.4 3.9 5.2 0 0 Z" fill="#81637B"/><path d="M2 0 L 12.9 0" stroke="rgba(255,255,255,0.35)" stroke-width="0.80"/></g></svg>
+  </div></div>
+      <div class="meta"><h3>B4 · Grace emblem, flanking vines</h3><p>Small caps over large script Grace, cradled by mirrored sprigs.</p></div>
+    </div><div class="card">
+      <div class="art" style="flex-direction:column; min-height:250px;"><div style="display:flex; align-items:center; gap:20px;">
+    <div style="transform:rotate(-12deg);"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 150 175" width="84" height="98"><path d="M120 10 C 50 30 18 90 30 160" fill="none" stroke="#5C6B5E" stroke-width="2.2" stroke-linecap="round"/><g transform="translate(96.5,18.9) rotate(112.4)"><path d="M0 0 C 2.7 -3.6 8.2 -3.7 10.9 0 C 8.2 3.7 2.7 3.6 0 0 Z" fill="#81637B"/><path d="M2 0 L 9.0 0" stroke="rgba(255,255,255,0.35)" stroke-width="0.80"/></g><g transform="translate(76.0,31.1) rotate(185.8)"><path d="M0 0 C 3.3 -4.3 9.8 -4.5 13.1 0 C 9.8 4.5 3.3 4.3 0 0 Z" fill="#79817A"/><path d="M2 0 L 10.7 0" stroke="rgba(255,255,255,0.35)" stroke-width="0.80"/></g><g transform="translate(59.1,46.1) rotate(90.7)"><path d="M0 0 C 3.8 -5.1 11.5 -5.2 15.4 0 C 11.5 5.2 3.8 5.1 0 0 Z" fill="#B79564"/><path d="M2 0 L 12.6 0" stroke="rgba(255,255,255,0.35)" stroke-width="0.80"/></g><g transform="translate(45.7,63.8) rotate(163.6)"><path d="M0 0 C 3.3 -4.4 10.0 -4.6 13.4 0 C 10.0 4.6 3.3 4.4 0 0 Z" fill="#79817A"/><path d="M2 0 L 11.0 0" stroke="rgba(255,255,255,0.35)" stroke-width="0.80"/></g><g transform="translate(36.0,83.7) rotate(68.7)"><path d="M0 0 C 3.9 -5.2 11.8 -5.4 15.8 0 C 11.8 5.4 3.9 5.2 0 0 Z" fill="#81637B"/><path d="M2 0 L 13.0 0" stroke="rgba(255,255,255,0.35)" stroke-width="0.80"/></g><g transform="translate(29.9,105.5) rotate(142.5)"><path d="M0 0 C 4.6 -6.1 13.8 -6.3 18.4 0 C 13.8 6.3 4.6 6.1 0 0 Z" fill="#AB6F7C"/><path d="M2 0 L 15.1 0" stroke="rgba(255,255,255,0.35)" stroke-width="0.83"/></g><g transform="translate(27.6,129.0) rotate(49.0)"><path d="M0 0 C 4.0 -5.2 11.9 -5.4 15.9 0 C 11.9 5.4 4.0 5.2 0 0 Z" fill="#79817A"/><path d="M2 0 L 13.0 0" stroke="rgba(255,255,255,0.35)" stroke-width="0.80"/></g><g transform="translate(29.0,153.7) rotate(124.3)"><path d="M0 0 C 4.6 -6.1 13.9 -6.3 18.5 0 C 13.9 6.3 4.6 6.1 0 0 Z" fill="#B79564"/><path d="M2 0 L 15.2 0" stroke="rgba(255,255,255,0.35)" stroke-width="0.83"/></g><g transform="translate(30.0,160.0) rotate(80.3)"><path d="M0 0 C 3.9 -5.2 11.8 -5.4 15.8 0 C 11.8 5.4 3.9 5.2 0 0 Z" fill="#81637B"/><path d="M2 0 L 12.9 0" stroke="rgba(255,255,255,0.35)" stroke-width="0.80"/></g></svg></div>
+    <div style="text-align:center; font-family:'Cormorant Garamond',serif; line-height:1.08;">
+      <div style="font-size:40px; color:#45274D;">Caring</div>
+      <div style="font-size:18px; color:#46625E; font-style:italic; margin:1px 0;">with</div>
+      <div style="font-size:40px; color:#45274D;">Grace</div>
+    </div>
+    <div style="transform:rotate(12deg);"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 150 175" width="84" height="98"><path d="M30 10 C 100 30 132 90 120 160" fill="none" stroke="#5C6B5E" stroke-width="2.2" stroke-linecap="round"/><g transform="translate(53.5,18.9) rotate(-16.4)"><path d="M0 0 C 2.7 -3.6 8.2 -3.7 10.9 0 C 8.2 3.7 2.7 3.6 0 0 Z" fill="#81637B"/><path d="M2 0 L 9.0 0" stroke="rgba(255,255,255,0.35)" stroke-width="0.80"/></g><g transform="translate(74.0,31.1) rotate(78.2)"><path d="M0 0 C 3.3 -4.3 9.8 -4.5 13.1 0 C 9.8 4.5 3.3 4.3 0 0 Z" fill="#79817A"/><path d="M2 0 L 10.7 0" stroke="rgba(255,255,255,0.35)" stroke-width="0.80"/></g><g transform="translate(90.9,46.1) rotate(5.3)"><path d="M0 0 C 3.8 -5.1 11.5 -5.2 15.4 0 C 11.5 5.2 3.8 5.1 0 0 Z" fill="#B79564"/><path d="M2 0 L 12.6 0" stroke="rgba(255,255,255,0.35)" stroke-width="0.80"/></g><g transform="translate(104.3,63.8) rotate(100.4)"><path d="M0 0 C 3.3 -4.4 10.0 -4.6 13.4 0 C 10.0 4.6 3.3 4.4 0 0 Z" fill="#79817A"/><path d="M2 0 L 11.0 0" stroke="rgba(255,255,255,0.35)" stroke-width="0.80"/></g><g transform="translate(114.0,83.7) rotate(27.3)"><path d="M0 0 C 3.9 -5.2 11.8 -5.4 15.8 0 C 11.8 5.4 3.9 5.2 0 0 Z" fill="#81637B"/><path d="M2 0 L 13.0 0" stroke="rgba(255,255,255,0.35)" stroke-width="0.80"/></g><g transform="translate(120.1,105.5) rotate(121.5)"><path d="M0 0 C 4.6 -6.1 13.8 -6.3 18.4 0 C 13.8 6.3 4.6 6.1 0 0 Z" fill="#AB6F7C"/><path d="M2 0 L 15.1 0" stroke="rgba(255,255,255,0.35)" stroke-width="0.83"/></g><g transform="translate(122.4,129.0) rotate(47.0)"><path d="M0 0 C 4.0 -5.2 11.9 -5.4 15.9 0 C 11.9 5.4 4.0 5.2 0 0 Z" fill="#79817A"/><path d="M2 0 L 13.0 0" stroke="rgba(255,255,255,0.35)" stroke-width="0.80"/></g><g transform="translate(121.0,153.7) rotate(139.7)"><path d="M0 0 C 4.6 -6.1 13.9 -6.3 18.5 0 C 13.9 6.3 4.6 6.1 0 0 Z" fill="#B79564"/><path d="M2 0 L 15.2 0" stroke="rgba(255,255,255,0.35)" stroke-width="0.83"/></g><g transform="translate(120.0,160.0) rotate(99.7)"><path d="M0 0 C 3.9 -5.2 11.8 -5.4 15.8 0 C 11.8 5.4 3.9 5.2 0 0 Z" fill="#81637B"/><path d="M2 0 L 12.9 0" stroke="rgba(255,255,255,0.35)" stroke-width="0.80"/></g></svg></div>
+  </div></div>
+      <div class="meta"><h3>B5 · Wreath cradle</h3><p>The serif stack resting inside an open half-wreath.</p></div>
+    </div><div class="card">
+      <div class="art" style="flex-direction:column; min-height:250px;"><div style="text-align:center;">
+    <div style="font-family:'Alex Brush',cursive; font-size:50px; color:#45274D; line-height:1;">Caring <span style="color:#46625E;">with</span> Grace</div>
+    <div style="margin-top:-4px; margin-left:60px;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 62" width="280" height="62"><path d="M6 40 C 80 34 160 30 240 22" fill="none" stroke="#5C6B5E" stroke-width="2.0" stroke-linecap="round"/><g transform="translate(32.9,37.9) rotate(-46.3)"><path d="M0 0 C 2.7 -3.6 8.2 -3.7 10.9 0 C 8.2 3.7 2.7 3.6 0 0 Z" fill="#81637B"/><path d="M2 0 L 9.0 0" stroke="rgba(255,255,255,0.35)" stroke-width="0.80"/></g><g transform="translate(60.6,35.9) rotate(38.0)"><path d="M0 0 C 3.3 -4.3 9.8 -4.5 13.1 0 C 9.8 4.5 3.3 4.3 0 0 Z" fill="#79817A"/><path d="M2 0 L 10.7 0" stroke="rgba(255,255,255,0.35)" stroke-width="0.80"/></g><g transform="translate(88.6,34.0) rotate(-45.9)"><path d="M0 0 C 3.8 -5.1 11.5 -5.2 15.4 0 C 11.5 5.2 3.8 5.1 0 0 Z" fill="#B79564"/><path d="M2 0 L 12.6 0" stroke="rgba(255,255,255,0.35)" stroke-width="0.80"/></g><g transform="translate(117.1,32.0) rotate(38.0)"><path d="M0 0 C 3.3 -4.4 10.0 -4.6 13.4 0 C 10.0 4.6 3.3 4.4 0 0 Z" fill="#79817A"/><path d="M2 0 L 11.0 0" stroke="rgba(255,255,255,0.35)" stroke-width="0.80"/></g><g transform="translate(145.7,30.0) rotate(-46.2)"><path d="M0 0 C 3.9 -5.2 11.8 -5.4 15.8 0 C 11.8 5.4 3.9 5.2 0 0 Z" fill="#81637B"/><path d="M2 0 L 13.0 0" stroke="rgba(255,255,255,0.35)" stroke-width="0.80"/></g><g transform="translate(174.6,27.8) rotate(37.5)"><path d="M0 0 C 4.6 -6.1 13.8 -6.3 18.4 0 C 13.8 6.3 4.6 6.1 0 0 Z" fill="#AB6F7C"/><path d="M2 0 L 15.1 0" stroke="rgba(255,255,255,0.35)" stroke-width="0.83"/></g><g transform="translate(203.7,25.4) rotate(-47.0)"><path d="M0 0 C 4.0 -5.2 11.9 -5.4 15.9 0 C 11.9 5.4 4.0 5.2 0 0 Z" fill="#79817A"/><path d="M2 0 L 13.0 0" stroke="rgba(255,255,255,0.35)" stroke-width="0.80"/></g><g transform="translate(232.8,22.7) rotate(36.5)"><path d="M0 0 C 4.6 -6.1 13.9 -6.3 18.5 0 C 13.9 6.3 4.6 6.1 0 0 Z" fill="#B79564"/><path d="M2 0 L 15.2 0" stroke="rgba(255,255,255,0.35)" stroke-width="0.83"/></g><g transform="translate(240.0,22.0) rotate(-5.7)"><path d="M0 0 C 3.9 -5.2 11.8 -5.4 15.8 0 C 11.8 5.4 3.9 5.2 0 0 Z" fill="#81637B"/><path d="M2 0 L 12.9 0" stroke="rgba(255,255,255,0.35)" stroke-width="0.80"/></g></svg></div>
+  </div></div>
+      <div class="meta"><h3>B6 · Vine from the G</h3><p>Site script; the underline grows out of Grace's tail into leaves.</p></div>
+    </div><div class="card">
+      <div class="art" style="flex-direction:column; min-height:250px;"><div style="position:relative; display:inline-block;">
+    <span style="font-family:'DM Serif Display',serif; font-size:38px; color:#C22B62;">Caring <em style="color:#6E7AC2; font-size:26px;">with</em> Grace</span>
+    <div style="position:absolute; right:-46px; top:-78px; transform:scale(0.62);"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 135" width="200" height="135"><path d="M12 120 C 60 92 96 56 150 12" fill="none" stroke="#8a93a5" stroke-width="2.2" stroke-linecap="round"/><g transform="translate(28.8,109.6) rotate(-75.3)"><path d="M0 0 C 2.9 -3.8 8.7 -4.0 11.7 0 C 8.7 4.0 2.9 3.8 0 0 Z" fill="#E884A8"/><path d="M2 0 L 9.6 0" stroke="rgba(255,255,255,0.35)" stroke-width="0.80"/></g><g transform="translate(47.8,96.4) rotate(5.7)"><path d="M0 0 C 3.5 -4.7 10.6 -4.8 14.1 0 C 10.6 4.8 3.5 4.7 0 0 Z" fill="#A4AEDB"/><path d="M2 0 L 11.6 0" stroke="rgba(255,255,255,0.35)" stroke-width="0.80"/></g><g transform="translate(66.2,82.2) rotate(-80.6)"><path d="M0 0 C 4.2 -5.5 12.6 -5.7 16.7 0 C 12.6 5.7 4.2 5.5 0 0 Z" fill="#E884A8"/><path d="M2 0 L 13.7 0" stroke="rgba(255,255,255,0.35)" stroke-width="0.80"/></g><g transform="translate(84.6,67.1) rotate(2.0)"><path d="M0 0 C 3.7 -4.9 11.0 -5.0 14.7 0 C 11.0 5.0 3.7 4.9 0 0 Z" fill="#C9A0D0"/><path d="M2 0 L 12.1 0" stroke="rgba(255,255,255,0.35)" stroke-width="0.80"/></g><g transform="translate(103.6,51.0) rotate(-82.5)"><path d="M0 0 C 4.4 -5.8 13.1 -6.0 17.5 0 C 13.1 6.0 4.4 5.8 0 0 Z" fill="#A4AEDB"/><path d="M2 0 L 14.3 0" stroke="rgba(255,255,255,0.35)" stroke-width="0.80"/></g><g transform="translate(123.6,34.0) rotate(1.7)"><path d="M0 0 C 5.1 -6.8 15.4 -7.0 20.5 0 C 15.4 7.0 5.1 6.8 0 0 Z" fill="#E884A8"/><path d="M2 0 L 16.8 0" stroke="rgba(255,255,255,0.35)" stroke-width="0.92"/></g><g transform="translate(145.2,15.9) rotate(-81.4)"><path d="M0 0 C 4.4 -5.9 13.3 -6.1 17.8 0 C 13.3 6.1 4.4 5.9 0 0 Z" fill="#A4AEDB"/><path d="M2 0 L 14.6 0" stroke="rgba(255,255,255,0.35)" stroke-width="0.80"/></g><g transform="translate(150.0,12.0) rotate(-39.2)"><path d="M0 0 C 4.2 -5.5 12.6 -5.7 16.8 0 C 12.6 5.7 4.2 5.5 0 0 Z" fill="#E884A8"/><path d="M2 0 L 13.8 0" stroke="rgba(255,255,255,0.35)" stroke-width="0.80"/></g></svg></div>
+  </div></div>
+      <div class="meta"><h3>B7 · Site palette bridge</h3><p>The same idea in the website's pink and periwinkle, if the team wants the site and logo palettes to match.</p></div>
+    </div><div class="card">
+      <div class="art" style="flex-direction:column; min-height:250px;"><div style="position:relative; width:190px; height:190px; display:flex; align-items:center; justify-content:center;">
+    <div style="position:absolute; left:2px; top:8px; transform:scale(0.95);"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 150 175" width="150" height="175"><path d="M120 10 C 50 30 18 90 30 160" fill="none" stroke="#5C6B5E" stroke-width="2.2" stroke-linecap="round"/><g transform="translate(96.5,18.9) rotate(112.4)"><path d="M0 0 C 2.7 -3.6 8.2 -3.7 10.9 0 C 8.2 3.7 2.7 3.6 0 0 Z" fill="#81637B"/><path d="M2 0 L 9.0 0" stroke="rgba(255,255,255,0.35)" stroke-width="0.80"/></g><g transform="translate(76.0,31.1) rotate(185.8)"><path d="M0 0 C 3.3 -4.3 9.8 -4.5 13.1 0 C 9.8 4.5 3.3 4.3 0 0 Z" fill="#79817A"/><path d="M2 0 L 10.7 0" stroke="rgba(255,255,255,0.35)" stroke-width="0.80"/></g><g transform="translate(59.1,46.1) rotate(90.7)"><path d="M0 0 C 3.8 -5.1 11.5 -5.2 15.4 0 C 11.5 5.2 3.8 5.1 0 0 Z" fill="#B79564"/><path d="M2 0 L 12.6 0" stroke="rgba(255,255,255,0.35)" stroke-width="0.80"/></g><g transform="translate(45.7,63.8) rotate(163.6)"><path d="M0 0 C 3.3 -4.4 10.0 -4.6 13.4 0 C 10.0 4.6 3.3 4.4 0 0 Z" fill="#79817A"/><path d="M2 0 L 11.0 0" stroke="rgba(255,255,255,0.35)" stroke-width="0.80"/></g><g transform="translate(36.0,83.7) rotate(68.7)"><path d="M0 0 C 3.9 -5.2 11.8 -5.4 15.8 0 C 11.8 5.4 3.9 5.2 0 0 Z" fill="#81637B"/><path d="M2 0 L 13.0 0" stroke="rgba(255,255,255,0.35)" stroke-width="0.80"/></g><g transform="translate(29.9,105.5) rotate(142.5)"><path d="M0 0 C 4.6 -6.1 13.8 -6.3 18.4 0 C 13.8 6.3 4.6 6.1 0 0 Z" fill="#AB6F7C"/><path d="M2 0 L 15.1 0" stroke="rgba(255,255,255,0.35)" stroke-width="0.83"/></g><g transform="translate(27.6,129.0) rotate(49.0)"><path d="M0 0 C 4.0 -5.2 11.9 -5.4 15.9 0 C 11.9 5.4 4.0 5.2 0 0 Z" fill="#79817A"/><path d="M2 0 L 13.0 0" stroke="rgba(255,255,255,0.35)" stroke-width="0.80"/></g><g transform="translate(29.0,153.7) rotate(124.3)"><path d="M0 0 C 4.6 -6.1 13.9 -6.3 18.5 0 C 13.9 6.3 4.6 6.1 0 0 Z" fill="#B79564"/><path d="M2 0 L 15.2 0" stroke="rgba(255,255,255,0.35)" stroke-width="0.83"/></g><g transform="translate(30.0,160.0) rotate(80.3)"><path d="M0 0 C 3.9 -5.2 11.8 -5.4 15.8 0 C 11.8 5.4 3.9 5.2 0 0 Z" fill="#81637B"/><path d="M2 0 L 12.9 0" stroke="rgba(255,255,255,0.35)" stroke-width="0.80"/></g></svg></div>
+    <div style="position:absolute; right:2px; top:8px; transform:scale(0.95);"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 150 175" width="150" height="175"><path d="M30 10 C 100 30 132 90 120 160" fill="none" stroke="#5C6B5E" stroke-width="2.2" stroke-linecap="round"/><g transform="translate(53.5,18.9) rotate(-16.4)"><path d="M0 0 C 2.7 -3.6 8.2 -3.7 10.9 0 C 8.2 3.7 2.7 3.6 0 0 Z" fill="#81637B"/><path d="M2 0 L 9.0 0" stroke="rgba(255,255,255,0.35)" stroke-width="0.80"/></g><g transform="translate(74.0,31.1) rotate(78.2)"><path d="M0 0 C 3.3 -4.3 9.8 -4.5 13.1 0 C 9.8 4.5 3.3 4.3 0 0 Z" fill="#79817A"/><path d="M2 0 L 10.7 0" stroke="rgba(255,255,255,0.35)" stroke-width="0.80"/></g><g transform="translate(90.9,46.1) rotate(5.3)"><path d="M0 0 C 3.8 -5.1 11.5 -5.2 15.4 0 C 11.5 5.2 3.8 5.1 0 0 Z" fill="#B79564"/><path d="M2 0 L 12.6 0" stroke="rgba(255,255,255,0.35)" stroke-width="0.80"/></g><g transform="translate(104.3,63.8) rotate(100.4)"><path d="M0 0 C 3.3 -4.4 10.0 -4.6 13.4 0 C 10.0 4.6 3.3 4.4 0 0 Z" fill="#79817A"/><path d="M2 0 L 11.0 0" stroke="rgba(255,255,255,0.35)" stroke-width="0.80"/></g><g transform="translate(114.0,83.7) rotate(27.3)"><path d="M0 0 C 3.9 -5.2 11.8 -5.4 15.8 0 C 11.8 5.4 3.9 5.2 0 0 Z" fill="#81637B"/><path d="M2 0 L 13.0 0" stroke="rgba(255,255,255,0.35)" stroke-width="0.80"/></g><g transform="translate(120.1,105.5) rotate(121.5)"><path d="M0 0 C 4.6 -6.1 13.8 -6.3 18.4 0 C 13.8 6.3 4.6 6.1 0 0 Z" fill="#AB6F7C"/><path d="M2 0 L 15.1 0" stroke="rgba(255,255,255,0.35)" stroke-width="0.83"/></g><g transform="translate(122.4,129.0) rotate(47.0)"><path d="M0 0 C 4.0 -5.2 11.9 -5.4 15.9 0 C 11.9 5.4 4.0 5.2 0 0 Z" fill="#79817A"/><path d="M2 0 L 13.0 0" stroke="rgba(255,255,255,0.35)" stroke-width="0.80"/></g><g transform="translate(121.0,153.7) rotate(139.7)"><path d="M0 0 C 4.6 -6.1 13.9 -6.3 18.5 0 C 13.9 6.3 4.6 6.1 0 0 Z" fill="#B79564"/><path d="M2 0 L 15.2 0" stroke="rgba(255,255,255,0.35)" stroke-width="0.83"/></g><g transform="translate(120.0,160.0) rotate(99.7)"><path d="M0 0 C 3.9 -5.2 11.8 -5.4 15.8 0 C 11.8 5.4 3.9 5.2 0 0 Z" fill="#81637B"/><path d="M2 0 L 12.9 0" stroke="rgba(255,255,255,0.35)" stroke-width="0.80"/></g></svg></div>
+    <div style="font-family:'Cormorant Garamond',serif; font-size:52px; color:#45274D;">C<span style="color:#46625E; font-size:34px;">w</span>G</div>
+  </div></div>
+      <div class="meta"><h3>B8 · Monogram wreath</h3><p>CwG serif monogram in a full botanical circle, for seals and avatars.</p></div>
+    </div><div class="card">
+      <div class="art" style="flex-direction:column; min-height:250px;"><div style="display:flex; align-items:center; gap:22px;">
+    <div style="transform:scale(0.85);"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 130 225" width="130" height="225"><path d="M60 210 C 24 150 84 84 50 14" fill="none" stroke="#4A3A50" stroke-width="2.2" stroke-linecap="round"/><g transform="translate(50.9,188.1) rotate(-146.3)"><path d="M0 0 C 3.3 -6.3 9.8 -6.5 13.1 0 C 9.8 6.5 3.3 6.3 0 0 Z" fill="#45274D"/><path d="M2 0 L 10.8 0" stroke="rgba(255,255,255,0.35)" stroke-width="0.80"/></g><g transform="translate(48.1,161.7) rotate(-46.9)"><path d="M0 0 C 4.0 -7.6 11.9 -7.9 15.9 0 C 11.9 7.9 4.0 7.6 0 0 Z" fill="#81637B"/><path d="M2 0 L 13.0 0" stroke="rgba(255,255,255,0.35)" stroke-width="0.80"/></g><g transform="translate(50.8,134.6) rotate(-122.7)"><path d="M0 0 C 4.7 -9.0 14.1 -9.3 18.8 0 C 14.1 9.3 4.7 9.0 0 0 Z" fill="#AB6F7C"/><path d="M2 0 L 15.5 0" stroke="rgba(255,255,255,0.35)" stroke-width="0.85"/></g><g transform="translate(55.9,106.9) rotate(-37.5)"><path d="M0 0 C 4.1 -8.0 12.4 -8.2 16.6 0 C 12.4 8.2 4.1 8.0 0 0 Z" fill="#81637B"/><path d="M2 0 L 13.6 0" stroke="rgba(255,255,255,0.35)" stroke-width="0.80"/></g><g transform="translate(60.1,78.6) rotate(-126.7)"><path d="M0 0 C 4.9 -9.4 14.8 -9.8 19.7 0 C 14.8 9.8 4.9 9.4 0 0 Z" fill="#45274D"/><path d="M2 0 L 16.1 0" stroke="rgba(255,255,255,0.35)" stroke-width="0.89"/></g><g transform="translate(60.2,49.7) rotate(-54.1)"><path d="M0 0 C 5.8 -11.1 17.3 -11.4 23.1 0 C 17.3 11.4 5.8 11.1 0 0 Z" fill="#81637B"/><path d="M2 0 L 18.9 0" stroke="rgba(255,255,255,0.35)" stroke-width="1.04"/></g><g transform="translate(52.8,20.3) rotate(-154.2)"><path d="M0 0 C 5.0 -9.6 15.0 -9.9 20.0 0 C 15.0 9.9 5.0 9.6 0 0 Z" fill="#45274D"/><path d="M2 0 L 16.4 0" stroke="rgba(255,255,255,0.35)" stroke-width="0.90"/></g><g transform="translate(50.0,14.0) rotate(-115.9)"><path d="M0 0 C 4.7 -9.1 14.2 -9.4 18.9 0 C 14.2 9.4 4.7 9.1 0 0 Z" fill="#81637B"/><path d="M2 0 L 15.5 0" stroke="rgba(255,255,255,0.35)" stroke-width="0.85"/></g></svg></div>
+    <div style="text-align:center; font-family:'DM Serif Display',serif; line-height:1.08;">
+      <div style="font-size:46px; color:#45274D;">Caring</div>
+      <div style="font-size:20px; color:#46625E; font-style:italic; margin:1px 0;">with</div>
+      <div style="font-size:46px; color:#45274D;">Grace</div>
+    </div>
+  </div></div>
+      <div class="meta"><h3>B9 · Rounder leaves, plum tones</h3><p>Karen's option 2 arrangement with a drawn vine: rounder leaves, deeper plums.</p></div>
+    </div><div class="card" style="grid-column: 1 / -1;">
+      <div class="art" style="flex-direction:column; min-height:250px;"><div style="text-align:center;">
+    <div style="font-family:'Alex Brush',cursive; font-size:52px; color:#45274D; line-height:1;">Caring <span style="color:#46625E;">with</span> Grace</div>
+    <div style="margin-top:2px;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 80" width="400" height="67"><path d="M10 30 C 150 58 330 58 470 26" fill="none" stroke="#B79564" stroke-width="2.2" stroke-linecap="round"/><g transform="translate(62.0,38.9) rotate(-27.9)"><path d="M0 0 C 2.4 -3.1 7.1 -3.2 9.5 0 C 7.1 3.2 2.4 3.1 0 0 Z" fill="#81637B"/><path d="M2 0 L 7.8 0" stroke="rgba(255,255,255,0.35)" stroke-width="0.80"/></g><g transform="translate(100.5,43.7) rotate(42.1)"><path d="M0 0 C 2.8 -3.7 8.3 -3.8 11.1 0 C 8.3 3.8 2.8 3.7 0 0 Z" fill="#79817A"/><path d="M2 0 L 9.1 0" stroke="rgba(255,255,255,0.35)" stroke-width="0.80"/></g><g transform="translate(139.9,47.2) rotate(-31.8)"><path d="M0 0 C 3.2 -4.2 9.6 -4.4 12.8 0 C 9.6 4.4 3.2 4.2 0 0 Z" fill="#B79564"/><path d="M2 0 L 10.5 0" stroke="rgba(255,255,255,0.35)" stroke-width="0.80"/></g><g transform="translate(180.2,49.5) rotate(38.3)"><path d="M0 0 C 2.7 -3.6 8.2 -3.7 11.0 0 C 8.2 3.7 2.7 3.6 0 0 Z" fill="#79817A"/><path d="M2 0 L 9.0 0" stroke="rgba(255,255,255,0.35)" stroke-width="0.80"/></g><g transform="translate(220.8,50.5) rotate(-35.5)"><path d="M0 0 C 3.2 -4.2 9.6 -4.3 12.7 0 C 9.6 4.3 3.2 4.2 0 0 Z" fill="#81637B"/><path d="M2 0 L 10.4 0" stroke="rgba(255,255,255,0.35)" stroke-width="0.80"/></g><g transform="translate(261.6,50.2) rotate(34.7)"><path d="M0 0 C 3.7 -4.8 11.0 -5.0 14.6 0 C 11.0 5.0 3.7 4.8 0 0 Z" fill="#AB6F7C"/><path d="M2 0 L 12.0 0" stroke="rgba(255,255,255,0.35)" stroke-width="0.80"/></g><g transform="translate(302.2,48.6) rotate(-39.2)"><path d="M0 0 C 3.1 -4.1 9.3 -4.2 12.5 0 C 9.3 4.2 3.1 4.1 0 0 Z" fill="#79817A"/><path d="M2 0 L 10.2 0" stroke="rgba(255,255,255,0.35)" stroke-width="0.80"/></g><g transform="translate(342.4,45.7) rotate(30.9)"><path d="M0 0 C 3.6 -4.8 10.8 -4.9 14.4 0 C 10.8 4.9 3.6 4.8 0 0 Z" fill="#B79564"/><path d="M2 0 L 11.8 0" stroke="rgba(255,255,255,0.35)" stroke-width="0.80"/></g><g transform="translate(381.8,41.4) rotate(-43.2)"><path d="M0 0 C 4.1 -5.4 12.3 -5.6 16.4 0 C 12.3 5.6 4.1 5.4 0 0 Z" fill="#81637B"/><path d="M2 0 L 13.5 0" stroke="rgba(255,255,255,0.35)" stroke-width="0.80"/></g><g transform="translate(420.2,35.8) rotate(26.5)"><path d="M0 0 C 3.5 -4.6 10.5 -4.8 14.0 0 C 10.5 4.8 3.5 4.6 0 0 Z" fill="#79817A"/><path d="M2 0 L 11.4 0" stroke="rgba(255,255,255,0.35)" stroke-width="0.80"/></g><g transform="translate(457.3,28.8) rotate(-47.9)"><path d="M0 0 C 4.0 -5.3 12.0 -5.5 16.1 0 C 12.0 5.5 4.0 5.3 0 0 Z" fill="#B79564"/><path d="M2 0 L 13.2 0" stroke="rgba(255,255,255,0.35)" stroke-width="0.80"/></g><g transform="translate(470.0,26.0) rotate(-12.9)"><path d="M0 0 C 3.4 -4.5 10.2 -4.7 13.7 0 C 10.2 4.7 3.4 4.5 0 0 Z" fill="#79817A"/><path d="M2 0 L 11.2 0" stroke="rgba(255,255,255,0.35)" stroke-width="0.80"/></g></svg></div>
+    <div style="font-family:'DM Sans',sans-serif; font-size:11px; letter-spacing:0.26em; color:#8a93a5; margin-top:6px;">HELPING THOSE YOU LOVE LIVE WITH DIGNITY</div>
+  </div></div>
+      <div class="meta"><h3>B10 · Full lockup with garland</h3><p>Script line over a leafed garland, tagline beneath: closest to a launch-ready lockup.</p></div>
+    </div>
     </div>
   </div>
 </section>
 
 <footer>
-  <div class="container">
-    Internal working page; not linked from the site. Colors: pink #E84880, soft pink #F6A8C8, periwinkle #6E7AC2.
-  </div>
+  <div class="container">Internal working page; not linked from the site. These are exploration mockups; the chosen direction gets rebuilt as a print-ready vector (text outlined) like the previous logo was.</div>
 </footer>
 
 </body>
